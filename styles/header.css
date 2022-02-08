@@ -1,0 +1,122 @@
+* {
+  font-family: "Oswald", sans-serif;
+}
+body {
+  background-color: #f0e9d2;
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  position: fixed;
+  z-index: 25;
+}
+.logo {
+  height: 120%;
+}
+.left {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 48 0 0 45;
+}
+.right {
+  grid-area: 1 / 5 / 2 / 6;
+  text-align: center;
+  font-size: 250%;
+  margin: 80 80 0 0;
+  font-weight: bolder;
+}
+a {
+  text-decoration: none;
+  color: #181d31;
+}
+/* navbar */
+
+.menu,
+.menu-burger,
+.menu-bg {
+  position: fixed;
+  width: 108px;
+  height: 108px;
+  font-size: 108px;
+  text-align: center;
+  border-radius: 100%;
+  left: 72px;
+  top: 169px;
+}
+
+.menu-bg {
+  background: #e6ddc4;
+  pointer-events: none;
+  transition: 0.3s;
+  left: -26px;
+  top: 417px;
+  transform: translate3d(50%, -50%, 0);
+  transform-origin: center center;
+  width: 150px;
+  height: 150px;
+}
+.menu-bg.fs {
+  transform: translate3d(50%, -50%, 0);
+  width: 300vw;
+  height: 319vw;
+  z-index: 1;
+}
+
+.menu-burger {
+  color: black;
+  padding-top: 11px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  transition: 0.4s;
+  transform-origin: center;
+  z-index: 1;
+  top: 18%;
+}
+.menu-burger.fs {
+  transform: rotate(-180deg) translateY(10px);
+  z-index: 23;
+}
+
+.menu-items {
+  position: fixed;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s;
+  transform: translateY(-200%);
+  pointer-events: none;
+  background-color: #f5ecd2e3;
+  height: 100%;
+}
+.menu-items div {
+  transition: 1s;
+  opacity: 0;
+  margin-top: 0px;
+}
+.menu-items.fs {
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 2;
+}
+.menu-items.fs div {
+  opacity: 1;
+  margin-top: 50px;
+  color: black;
+}
+.content {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  font-size: 35px;
+  text-align: center;
+}
+span {
+  background-color: #fae9c9;
+  font-size: 45px;
+  font-weight: bold;
+}
