@@ -1,0 +1,58 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 30%;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    to top,
+    #678983,
+    #678983,
+    #678983,
+    #678983,
+    #678983,
+    #719188,
+    #7b998e,
+    #86a193,
+    #9fb3a0,
+    #bac5af,
+    #d5d7bf,
+    #f0e9d2
+  );
+}
+
+.faq {
+  grid-area: 2 / 2 / 3 / 3;
+  font-size: 300%;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 37%;
+}
+.up {
+  grid-area: 2 / 3 / 3 / 4;
+  transform: rotate(270deg);
+  height: 100;
+  position: absolute;
+  right: 10%;
+}
+.contact {
+  grid-area: 3 / 2 / 4 / 3;
+  font-size: 300%;
+  font-weight: bolder;
+  text-align: center;
+}
+.legal {
+  grid-area: 4 / 2 / 5 / 3;
+  font-size: 300%;
+  font-weight: bolder;
+  text-align: center;
+}
+.copyright {
+  grid-area: 6 / 1 / 7 / 4;
+  font-size: 300%;
+  font-weight: bolder;
+  text-align: center;
+}

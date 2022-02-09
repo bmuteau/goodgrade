@@ -33,8 +33,6 @@
     <div><a href="#">• Politique de confidentialité</a></div>
     <br />
 
-
-    <div><a href="connexionregister">• Se déconnecter</a></div>
 </div>
 
 

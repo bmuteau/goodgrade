@@ -11,6 +11,7 @@ body {
   grid-row-gap: 0px;
   position: fixed;
   z-index: 25;
+  backdrop-filter: blur(28px);
 }
 .logo {
   height: 120%;
