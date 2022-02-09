@@ -1,15 +1,160 @@
 .search {
   position: absolute;
   width: 80%;
-  top: 31%;
+  top: 32%;
   height: 5%;
   transform: translateX(-50%);
-  left: 50%;
+  left: 60%;
+  border-radius: 8%;
 }
 .submit {
   position: absolute;
   width: 80%;
-  top: 31%;
+  top: 32%;
   height: 5%;
-  left: -24%;
+  left: -8%;
+}
+
+.title {
+  position: absolute;
+  top: 42%;
+  left: 35%;
+  font-size: 338%;
+  font-weight: bolder;
+}
+body {
+  width: 80%;
+}
+.new {
+  position: absolute;
+  top: 90%;
+  left: 18%;
+  font-size: 338%;
+  font-weight: bolder;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  top: 94%;
+  position: absolute;
+  width: 100%;
+  font-size: 300%;
+  margin-top: 10%;
+  left: 7%;
+  list-style: none;
+}
+
+.last1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.last2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.last3 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.last4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.last5 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.last6 {
+  grid-area: 3 / 4 / 4 / 5;
+}
+/* C */
+/* ========================================================================== */
+.c {
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  padding-bottom: 40px;
+  box-shadow: 0 8px 48px 2px hsl(10deg 6% 15% / 40%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+  top: 50%;
+  left: 57%;
+  transform: translateX(-50%);
+}
+
+.ci {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  transform-origin: left 50%;
+  background: inherit;
+  z-index: var(--z);
+  transition: 0.3s ease-out;
+}
+
+.ci img {
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.ch {
+  position: absolute;
+  top: 70%;
+  left: 4%;
+  transform: translateY(-50%);
+  font-size: 300%;
+  color: white;
+}
+
+.c > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -10;
+}
+
+label {
+  width: 10%;
+  height: 10px;
+  margin-right: 4px;
+  border-radius: 20px;
+  background: hsla(0 0% 90% / 0.3);
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+label:last-child {
+  margin-right: 0;
+}
+
+input:checked + label {
+  background: linear-gradient(
+    to right,
+    hsla(var(--hue) 80% 70% / 0.7),
+    hsla(calc(var(--hue) + 30) 80% 50% / 0.7)
+  );
+}
+
+input:not(:checked) + label + .ci {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+input:checked + label + .ci ~ .ci {
+  transform: translateX(100%);
+}
+
+input:not(:checked) + label + .ci {
+  transition: 0;
+}
+.img {
+  height: 100%;
+  width: 100%;
 }

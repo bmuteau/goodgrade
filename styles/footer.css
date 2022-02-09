@@ -5,8 +5,9 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 30%;
-  bottom: 0;
-  width: 100%;
+  bottom: -120%;
+  width: 174%;
+  left: -37%;
   background-image: linear-gradient(
     to top,
     #678983,
@@ -22,6 +23,7 @@
     #d5d7bf,
     #f0e9d2
   );
+  position: relative;
 }
 
 .faq {
@@ -52,7 +54,11 @@
 }
 .copyright {
   grid-area: 6 / 1 / 7 / 4;
-  font-size: 300%;
+  font-size: 250%;
   font-weight: bolder;
   text-align: center;
+  margin-left: 16%;
+}
+a {
+  margin-left: 42%;
 }
