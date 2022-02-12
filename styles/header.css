@@ -14,19 +14,22 @@ body {
   backdrop-filter: blur(28px);
   width: 100%;
   left: 0;
+  top: 0;
+  grid-template-rows: 116px;
+  height: 117px;
 }
 .logo {
-  height: 120%;
+  height: 70%;
 }
 .left {
   grid-area: 1 / 1 / 2 / 2;
-  margin: 48 0 0 45;
+  margin: 10px 0 0 15px;
 }
 .right {
   grid-area: 1 / 5 / 2 / 6;
   text-align: center;
-  font-size: 250%;
-  margin: 80 80 0 0;
+  font-size: 15px;
+  margin: 22px 55px 0 0;
   font-weight: bolder;
 }
 a {
@@ -41,25 +44,13 @@ a {
   position: fixed;
   width: 108px;
   height: 108px;
-  font-size: 108px;
+  font-size: 36px;
   text-align: center;
   border-radius: 100%;
-  left: 72px;
+  left: -5px;
   top: 169px;
 }
 
-.menu-bg {
-  background: #e6ddc4;
-  pointer-events: none;
-  transition: 0.3s;
-  left: -26px;
-  top: 420px;
-  transform: translate3d(50%, -50%, 0);
-  transform-origin: center center;
-  width: 150px;
-  height: 150px;
-  position: absolute;
-}
 .menu-bg.fs {
   transform: translate3d(50%, -50%, 0);
   height: 319vw;
@@ -74,7 +65,7 @@ a {
   transition: 0.4s;
   transform-origin: center;
   z-index: 1;
-  top: 18%;
+  top: 14%;
   position: absolute;
 }
 .menu-burger.fs {
@@ -85,7 +76,7 @@ a {
 .menu-items {
   position: fixed;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 10px;
   color: white;
   width: 100%;
   text-align: center;
@@ -111,7 +102,7 @@ a {
   opacity: 1;
   margin-top: 50px;
   color: black;
-  margin-left: -69%;
+  margin-left: 0;
   font-size: 160%;
 }
 .content {
@@ -125,4 +116,53 @@ span {
   background-color: #fae9c9;
   font-size: 45px;
   font-weight: bold;
+}
+/* RESPONSIVE  */
+
+@media (min-width: 426px) {
+  .logo {
+    height: 70%;
+    margin-top: 12px;
+  }
+  .right {
+    font-size: 20px;
+  }
+  .menu-burger {
+    top: 11%;
+    font-size: 45px;
+    left: 0%;
+  }
+  .menu-items {
+    font-size: 15px;
+  }
+  .header {
+    grid-template-rows: 115px;
+    height: 11%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-burger {
+    top: 24%;
+    font-size: 45px;
+    left: 2%;
+  }
+  .menu-items {
+    font-size: 12px;
+    margin-top: 41px;
+  }
+  .logo {
+    height: 90%;
+  }
+  .right {
+    font-size: 23px;
+    margin-top: 25px;
+  }
+  .header {
+    grid-template-rows: 181px;
+    height: 19%;
+  }
+  .menu-items.fs div {
+    margin-top: 30px;
+  }
 }
