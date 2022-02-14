@@ -25,8 +25,8 @@
     <br />
     <br />
     <br />
-    <div> <a href="#">• Accueil </a> </div>
-    <div><a href="#">• Comment ça marche ? </a></div>
+    <div> <a href="../pages/home.php">• Accueil </a> </div>
+    <div><a href="../pages/howtouse.php">• Comment ça marche ? </a></div>
     <div><a href="#">• FAQ </a></div>
     <br />
 
