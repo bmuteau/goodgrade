@@ -20,7 +20,7 @@
     #f0e9d2
   );
   position: absolute;
-  bottom: -101px;
+  bottom: -150px;
   width: 100%;
   height: 166px;
 }
@@ -66,6 +66,7 @@
 @media (min-width: 426px) {
   .footer {
     height: 300px;
+    bottom: -276px;
   }
   .faq {
     font-size: 30px;
@@ -81,18 +82,19 @@
 
 @media (min-width: 768px) and (max-width: 2129px) {
   .footer {
-    height: 510px;
+    height: 480px;
+    bottom: -850px;
   }
   .faq {
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
   }
   .legal {
-    font-size: 30px;
+    font-size: 25px;
     margin-left: -28px;
   }
   .contact {
-    font-size: 30px;
+    font-size: 25px;
   }
   .copyright {
     font-size: 20px;
