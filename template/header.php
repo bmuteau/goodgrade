@@ -10,7 +10,7 @@
 
 
 <section class="header">
-    <div class="left"><img src="../src/Logo1.png" class="logo"></div>
+    <div class="left"><a href="../pages/home.php"><img src="../src/Logo1.png" class="logo"></a></div>
     <div class="right"><a href="#">Connexion</a><br>
         <a href="#">Inscription</a>
     </div>
@@ -27,7 +27,7 @@
     <br />
     <div> <a href="../pages/home.php">• Accueil </a> </div>
     <div><a href="../pages/howtouse.php">• Comment ça marche ? </a></div>
-    <div><a href="#">• FAQ </a></div>
+    <div><a href="../pages/faq.php">• FAQ </a></div>
     <br />
 
     <div> <a href="#">• Nous contacter</a></div>
