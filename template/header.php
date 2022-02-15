@@ -32,7 +32,7 @@
 
     <div> <a href="../pages/contact.php">• Nous contacter</a></div>
     <div><a href="../pages/mentionlegal.php">• Mentions légale </a></div>
-    <div><a href="#">• Politique de confidentialité</a></div>
+    <div><a href="../pages/confidentiality.php">• Politique de confidentialité</a></div>
     <br />
 
 </div>

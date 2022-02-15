@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#main {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+}
+.pc {
+  margin-top: 41%;
+  text-align: center;
+}
+.margin {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  list-style-position: inside;
+}
+
+/* RESPONSIVE  */
+
+@media (min-width: 426px) {
+  .pc {
+    margin-top: 20%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 2129px) {
+  .pc {
+    margin-top: 19%;
+  }
+}
