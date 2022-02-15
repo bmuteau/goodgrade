@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#main {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+}
+.title {
+  margin-top: 6%;
+  text-align: center;
+}
+* {
+  font-family: "Oswald", sans-serif;
+}
+body {
+  background-color: #f0e9d2;
+}
+a {
+  text-decoration: none;
+  color: #181d31;
+}
+.logo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 196px;
+}
+.thanks,
+.desc {
+  text-align: center;
+}
+#et-select {
+  text-align: center;
+  margin-left: 10%;
+  width: 80%;
+  height: 7%;
+}
+textarea {
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 10px;
+  width: 80%;
+  height: 14%;
+}
+input {
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 10px;
+  width: 80%;
+  height: 7%;
+}
+legend {
+  text-align: center;
+}
+fieldset {
+  width: 80%;
+  margin-left: 9%;
+  margin-top: 22px;
+  margin-bottom: 26px;
+}
+.more {
+  color: red;
+  text-align: center;
+}
+.send {
+  font-size: 20px;
+  width: 60%;
+  margin-left: 19%;
+  margin-bottom: 26px;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE  */
+
+@media (min-width: 768px) and (max-width: 2129px) {
+  input[type="file"] {
+    margin-left: 42%;
+    width: 60%;
+  }
+  .send {
+    font-size: 23px;
+    width: 30%;
+    margin-left: 34%;
+  }
+}
