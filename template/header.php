@@ -11,7 +11,7 @@
 
 <section class="header">
     <div class="left"><a href="../pages/home.php"><img src="../src/Logo1.png" class="logo"></a></div>
-    <div class="right"><a href="#">Connexion</a><br>
+    <div class="right"><a href="../pages/login.php">Connexion</a><br>
         <a href="../pages/persoregister.php">Inscription</a>
     </div>
 </section>

@@ -35,7 +35,7 @@
 
 
         <input name="sendregister" type="submit" class="submitsend" value="S'inscrire"><br />
-        <a href="login" class="already">J'ai déjà un compte ! </a>
+        <a href="../pages/login.php" class="already">J'ai déjà un compte ! </a>
 
     </form>
 

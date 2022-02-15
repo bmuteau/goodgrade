@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#main {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+}
+.title {
+  margin-top: 6%;
+  text-align: center;
+}
+* {
+  font-family: "Oswald", sans-serif;
+}
+body {
+  background-color: #f0e9d2;
+}
+a {
+  text-decoration: none;
+  color: #181d31;
+}
+.logo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 196px;
+}
+form {
+  text-align: center;
+}
+input {
+  width: 80%;
+  height: 5%;
+}
+.pass {
+  margin-bottom: 50px;
+}
+.psw,
+.already2 {
+  margin-left: 35%;
+  text-decoration: underline;
+}
+.login {
+  margin-top: -10px;
+  width: 60%;
+}
+input::placeholder {
+  text-align: center;
+}
+
+/* RESPONSIVE  */
+
+@media (min-width: 426px) {
+  .psw,
+  .already2 {
+    margin-left: 41%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 2129px) {
+  .psw,
+  .already2 {
+    margin-left: 46%;
+  }
+}
