@@ -30,7 +30,7 @@
     <div><a href="../pages/faq.php">• FAQ </a></div>
     <br />
 
-    <div> <a href="#">• Nous contacter</a></div>
+    <div> <a href="../pages/contact.php">• Nous contacter</a></div>
     <div><a href="#">• Mentions légale </a></div>
     <div><a href="#">• Politique de confidentialité</a></div>
     <br />

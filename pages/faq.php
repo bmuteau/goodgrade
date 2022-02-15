@@ -49,6 +49,7 @@ include '../template/header.php';
             </p>
 
         </div>
+        <h2 class="asking"><a href="../pages/contact.php">Pour poser votre question, cliquer ici</a></h2>
 
     </div>
 </body>
