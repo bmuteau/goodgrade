@@ -11,7 +11,8 @@
 
 <body>
 
-    <img src="../src/Logo1.png" class="logo">
+    <a href="../pages/home.php"> <img src="../src/Logo1.png" class="logo"></a>
+
     <p class="center">Merci de vous être inscrit sur GoodGrade.<br />
 
         Vous avez reçu un email pour valider votre compte, veuillez cliquer dessus s'il vous plait. </p>

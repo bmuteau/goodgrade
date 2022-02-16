@@ -215,4 +215,7 @@ input:not(:checked) + label + .ci {
   .img {
     width: 147%;
   }
+  .footer {
+    bottom: -100%;
+  }
 }

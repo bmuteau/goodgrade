@@ -11,7 +11,8 @@
 
 <body>
 
-    <img src="../src/Logo1.png" class="logo">
+    <a href="../pages/home.php"> <img src="../src/Logo1.png" class="logo"></a>
+
     <h1 class="title"> S'inscrire </h1>
     <h2 class="registeret"><a href="../pages/etregister.php"> ou enregistrer son établissement</a> </h2>
 

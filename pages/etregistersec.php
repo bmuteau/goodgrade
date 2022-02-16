@@ -11,7 +11,8 @@
 
 <body>
 
-    <img src="../src/Logo1.png" class="logo">
+    <a href="../pages/home.php"> <img src="../src/Logo1.png" class="logo"></a>
+
     <h1 class="thanks"> Merci pour votre confiance </h1>
     <h2 class="desc">Pour créer la page de votre établissement, veuillez compléter les champs suivant :</h2>
     <form>

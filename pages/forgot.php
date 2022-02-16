@@ -11,7 +11,8 @@
 
 <body>
 
-    <img src="../src/Logo1.png" class="logo">
+    <a href="../pages/home.php"> <img src="../src/Logo1.png" class="logo"></a>
+
     <h1 class="title"> Mot de passe oublié ? </h1>
 
     <div class="body">
