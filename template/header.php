@@ -6,6 +6,13 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
 
+
+
+
+
+
+
+
 <link rel="shortcut icon" type="image/png" href="../src/favicon/favicon-32x32.png" />
 
 

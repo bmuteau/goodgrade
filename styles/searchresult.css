@@ -68,7 +68,7 @@ input::placeholder {
 }
 .description {
   grid-area: 2 / 3 / 4 / 6;
-  width: 185px;
+  width: auto;
   height: 55px;
   overflow: hidden;
   text-overflow: ellipsis;
