@@ -46,7 +46,16 @@ label {
   margin-left: -105px;
 }
 .submitsend {
-  border-radius: 6px;
+  background-image: linear-gradient(
+    to right,
+    #678983,
+    #839f90,
+    #a2b49e,
+    #c4c8af,
+    #e6ddc4
+  );
+  border: none;
+  border-radius: 10px;
   width: 53%;
   margin-top: 16px;
   height: 6%;

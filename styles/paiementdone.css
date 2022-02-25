@@ -16,7 +16,16 @@ body {
   margin-left: 15%;
 }
 .backhome {
-  border: 2px solid black;
+  background-image: linear-gradient(
+    to right,
+    #678983,
+    #839f90,
+    #a2b49e,
+    #c4c8af,
+    #e6ddc4
+  );
+  border: none;
+  border-radius: 10px;
   padding: 10px 33px;
   position: relative;
   top: 7%;

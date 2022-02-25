@@ -46,6 +46,15 @@ button {
   padding: 10px 20px;
   font-size: 20px;
   margin-bottom: 102px;
+  background-image: linear-gradient(
+    to right,
+    #678983,
+    #839f90,
+    #a2b49e,
+    #c4c8af,
+    #e6ddc4
+  );
+  border: none;
 }
 .container {
   margin-top: 72px;

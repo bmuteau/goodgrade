@@ -14,27 +14,26 @@ include '../template/header.php';
     <h1 class="contacte">Nous contacter </h1>
 
     <form>
-        <input type="text" placeholder="Nom"> <br />
-        <input type="text" placeholder="Prénom"><br />
-        <input type="email" placeholder="Email" required><br />
-        <input type="text" placeholder="Titre"><br />
+        <input type="text" placeholder="Nom" onclick="javascript:this.placeholder = '';"> <br />
+        <input type="text" placeholder="Prénom" onclick="javascript:this.placeholder = '';"><br />
+        <input type="email" placeholder="Email" onclick="javascript:this.placeholder = '';" required><br />
+        <input type="text" placeholder="Titre" onclick="javascript:this.placeholder = '';"><br />
         <textarea rows="5" cols="33" required> Entrer votre message </textarea><br />
         <input type="submit" class="submit" placeholder="Envoyer ">
 
     </form>
 
 </body>
-
 <footer>
 
 
 
     <div class="footer">
 
-        <div class="faq"><a href="#">FAQ</a></div>
+        <div class="faq"><a href="../pages/faq.php">FAQ</a></div>
         <a href="#top"> <img src="../src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
-        <div class="contact"><a href="#">Nous contacter</a></div>
-        <div class="legal"><a href="#">Mentions légales</a></div>
+        <div class="contact"><a href="../pages/contact.php">Nous contacter</a></div>
+        <div class="legal"><a href="../pages/mentionlegal.php">Mentions légales</a></div>
         <div class="copyright">GoodGrade, site d'avis sécurisé</div>
 
     </div>

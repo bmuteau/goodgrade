@@ -28,7 +28,7 @@ input::placeholder {
 }
 .submit {
   position: sticky;
-  top: 286px;
+  top: 270px;
   height: 3%;
   left: 71%;
 }
@@ -98,6 +98,11 @@ ul {
 @media (min-width: 426px) {
   .submit {
     top: 376px;
+  }
+  .title {
+    margin-top: 32%;
+    width: 80%;
+    margin-left: 10%;
   }
 }
 

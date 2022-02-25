@@ -192,30 +192,50 @@ input:not(:checked) + label + .ci {
     font-size: 22px;
     left: 60px;
   }
+  .footer {
+    bottom: -290px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 2129px) {
   .title {
-    left: 40%;
+    left: 15%;
+    top: 32%;
   }
   .new {
-    top: 85%;
-    left: -4%;
+    top: 32%;
+    left: 50%;
+    width: 40%;
   }
   .list {
-    font-size: 35px;
-    left: 137px;
-    top: 80%;
+    font-size: 25px;
+    left: 52%;
+    top: 35%;
     padding-left: 0;
+    width: 40%;
   }
   .c {
-    top: 38%;
-    width: 68%;
+    top: 42%;
+    width: 30%;
+    left: 25%;
+    height: 30%;
   }
   .img {
-    width: 147%;
+    width: 340%;
+    height: 340%;
   }
   .footer {
     bottom: -100%;
+  }
+  .search {
+    top: 24%;
+  }
+  .submit {
+    top: 25%;
+  }
+  .ch {
+    top: 217%;
+    left: 115%;
+    width: 100%;
   }
 }

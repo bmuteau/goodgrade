@@ -47,6 +47,15 @@ input {
   font-size: 23px;
   font-weight: bolder;
   margin-bottom: 44px;
+  background-image: linear-gradient(
+    to right,
+    #678983,
+    #839f90,
+    #a2b49e,
+    #c4c8af,
+    #e6ddc4
+  );
+  border: none;
 }
 .already {
   text-decoration: underline;

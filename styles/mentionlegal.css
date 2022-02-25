@@ -19,6 +19,9 @@ body {
   margin-left: 10%;
   width: 80%;
 }
+.subtitle {
+  font-size: 30px;
+}
 
 /* RESPONSIVE  */
 

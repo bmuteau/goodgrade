@@ -60,8 +60,7 @@ li {
     #c4c8af,
     #e6ddc4
   );
-  box-shadow: -1px 5px 15px 5px #678983;
-  border-color: #678983;
+  border: none;
 }
 .footer {
   bottom: -606px;
@@ -89,7 +88,7 @@ li {
 
 @media (min-width: 768px) and (max-width: 2129px) {
   .center {
-    margin-top: 15%;
+    margin-top: 19%;
   }
   .htu {
     font-size: 35px;

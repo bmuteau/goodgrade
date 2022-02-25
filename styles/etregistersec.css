@@ -72,6 +72,15 @@ fieldset {
   margin-left: 19%;
   margin-bottom: 26px;
   border-radius: 12px;
+  background-image: linear-gradient(
+    to right,
+    #678983,
+    #839f90,
+    #a2b49e,
+    #c4c8af,
+    #e6ddc4
+  );
+  border: none;
 }
 
 /* RESPONSIVE  */
