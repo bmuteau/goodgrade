@@ -1,6 +1,8 @@
 <?php
 include '../template/header.php';
 ?>
+<title>F.A.Q - GoodGrade</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="../styles/faq.css" rel="stylesheet">

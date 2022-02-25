@@ -1,6 +1,8 @@
 <?php
 include '../template/header.php';
 ?>
+<title>Mes adresses favorites - GoodGrade</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="../styles/favorite.css" rel="stylesheet">

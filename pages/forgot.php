@@ -1,4 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mot de passe oublié - GoodGrade</title>
+
 
 <link rel="shortcut icon" type="image/png" href="../src/favicon/favicon-32x32.png" />
 

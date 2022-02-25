@@ -2,6 +2,8 @@
 include '../template/header.php';
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abonnement - GoodGrade</title>
+
 
 <link href="../styles/subscription.css" rel="stylesheet">
 <link href="../styles/footer.css" rel="stylesheet">

@@ -2,6 +2,8 @@
 include '../template/header.php';
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commande - GoodGrade</title>
+
 
 <link href="../styles/paiementdone.css" rel="stylesheet">
 <link href="../styles/footer.css" rel="stylesheet">

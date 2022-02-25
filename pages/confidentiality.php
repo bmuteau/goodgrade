@@ -1,6 +1,7 @@
 <?php
 include '../template/header.php';
 ?>
+<title>Politique de confidentialité - GoodGrade</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="../styles/confidentiality.css" rel="stylesheet">
