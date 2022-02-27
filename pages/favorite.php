@@ -1,12 +1,12 @@
 <?php
-include '../template/header.php';
+include 'template/header.php';
 ?>
 <title>Mes adresses favorites - GoodGrade</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="../styles/favorite.css" rel="stylesheet">
-<link href="../styles/footer.css" rel="stylesheet">
+<link href="styles/favorite.css" rel="stylesheet">
+<link href="styles/footer.css" rel="stylesheet">
 
 <div id="top"></div>
 
@@ -15,93 +15,93 @@ include '../template/header.php';
 
     <ul class="favorite">
         <li>
-            <div class="picture"> <img src="../src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
+            <div class="picture"> <img src="src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
             <div class="name">$VARIABLE_NomDeLEtablissement</div>
             <div class="adress">
-                <img src="../src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
+                <img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
             </div>
             <div class="onlybs">ADRESSE DU RESTO <br />
                 FRANCE
 
             </div>
-            <div class="tel"><img src="../src/iconfinder_local_phone_352510.svg" class="phone"></div>
+            <div class="tel"><img src="src/iconfinder_local_phone_352510.svg" class="phone"></div>
             <div class="onlybstel">0707070707</div>
             <div class="note">
                 <!--variable note --> 5/5
             </div>
-            <div class="delete"><img src="../src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
+            <div class="delete"><img src="src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
 
         </li>
         <li>
-            <div class="picture"> <img src="../src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
+            <div class="picture"> <img src="src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
             <div class="name">$VARIABLE_NomDeLEtablissement</div>
             <div class="adress">
-                <img src="../src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
+                <img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
             </div>
             <div class="onlybs">ADRESSE DU RESTO <br />
                 FRANCE
 
             </div>
-            <div class="tel"><img src="../src/iconfinder_local_phone_352510.svg" class="phone"></div>
+            <div class="tel"><img src="src/iconfinder_local_phone_352510.svg" class="phone"></div>
             <div class="onlybstel">0707070707</div>
             <div class="note">
                 <!--variable note --> 5/5
             </div>
-            <div class="delete"><img src="../src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
+            <div class="delete"><img src="src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
 
         </li>
         <li>
-            <div class="picture"> <img src="../src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
+            <div class="picture"> <img src="src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
             <div class="name">$VARIABLE_NomDeLEtablissement</div>
             <div class="adress">
-                <img src="../src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
+                <img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
             </div>
             <div class="onlybs">ADRESSE DU RESTO <br />
                 FRANCE
 
             </div>
-            <div class="tel"><img src="../src/iconfinder_local_phone_352510.svg" class="phone"></div>
+            <div class="tel"><img src="src/iconfinder_local_phone_352510.svg" class="phone"></div>
             <div class="onlybstel">0707070707</div>
             <div class="note">
                 <!--variable note --> 5/5
             </div>
-            <div class="delete"><img src="../src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
+            <div class="delete"><img src="src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
 
         </li>
         <li>
-            <div class="picture"> <img src="../src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
+            <div class="picture"> <img src="src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
             <div class="name">$VARIABLE_NomDeLEtablissement</div>
             <div class="adress">
-                <img src="../src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
+                <img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
             </div>
             <div class="onlybs">ADRESSE DU RESTO <br />
                 FRANCE
 
             </div>
-            <div class="tel"><img src="../src/iconfinder_local_phone_352510.svg" class="phone"></div>
+            <div class="tel"><img src="src/iconfinder_local_phone_352510.svg" class="phone"></div>
             <div class="onlybstel">0707070707</div>
             <div class="note">
                 <!--variable note --> 5/5
             </div>
-            <div class="delete"><img src="../src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
+            <div class="delete"><img src="src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
 
         </li>
         <li>
-            <div class="picture"> <img src="../src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
+            <div class="picture"> <img src="src/iconfinder_photo_picture_image_photography_115696.svg" class="pictures"></div>
             <div class="name">$VARIABLE_NomDeLEtablissement</div>
             <div class="adress">
-                <img src="../src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
+                <img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg" class="gps">
             </div>
             <div class="onlybs">ADRESSE DU RESTO <br />
                 FRANCE
 
             </div>
-            <div class="tel"><img src="../src/iconfinder_local_phone_352510.svg" class="phone"></div>
+            <div class="tel"><img src="src/iconfinder_local_phone_352510.svg" class="phone"></div>
             <div class="onlybstel">0707070707</div>
             <div class="note">
                 <!--variable note --> 5/5
             </div>
-            <div class="delete"><img src="../src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
+            <div class="delete"><img src="src/iconfinder_close_cross_delete_remove_4879885.svg" class="cross"></div>
 
         </li>
     </ul>
@@ -115,10 +115,10 @@ include '../template/header.php';
 
     <div class="footer">
 
-        <div class="faq"><a href="../pages/faq.php">FAQ</a></div>
-        <a href="#top"> <img src="../src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
-        <div class="contact"><a href="../pages/contact.php">Nous contacter</a></div>
-        <div class="legal"><a href="../pages/mentionlegal.php">Mentions légales</a></div>
+        <div class="faq"><a href="faq">FAQ</a></div>
+        <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
+        <div class="contact"><a href="contact">Nous contacter</a></div>
+        <div class="legal"><a href="mentionlegal">Mentions légales</a></div>
         <div class="copyright">GoodGrade, site d'avis sécurisé</div>
 
     </div>

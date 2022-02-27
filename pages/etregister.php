@@ -1,21 +1,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscrire son établissement- GoodGrade</title>
 
-<link rel="shortcut icon" type="image/png" href="../src/favicon/favicon-32x32.png" />
+<link rel="shortcut icon" type="image/png" href="src/favicon/favicon-32x32.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<link href="../styles/etregister.css" rel="stylesheet">
-<link href="../styles/footer.css" rel="stylesheet">
+<link href="styles/etregister.css" rel="stylesheet">
+<link href="styles/footer.css" rel="stylesheet">
 
 <body>
 
-    <a href="../pages/home.php"> <img src="../src/Logo1.png" class="logo"></a>
+    <a href="home"> <img src="src/Logo1.png" class="logo"></a>
 
     <h1 class="title"> Enregister son établissement </h1>
-    <h2 class="registeret"><a href="../pages/persoregister.php"> ou s'inscrire </a> </h2>
+    <h2 class="registeret"><a href="persoregister"> ou s'inscrire </a> </h2>
 
     <form method="POST">
         <p class="rules">Tous les champs sont obligatoires</p>
@@ -48,10 +48,10 @@
 
     <div class="footer">
 
-        <div class="faq"><a href="../pages/faq.php">FAQ</a></div>
-        <a href="#top"> <img src="../src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
-        <div class="contact"><a href="../pages/contact.php">Nous contacter</a></div>
-        <div class="legal"><a href="../pages/mentionlegal.php">Mentions légales</a></div>
+        <div class="faq"><a href="faq">FAQ</a></div>
+        <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
+        <div class="contact"><a href="contact">Nous contacter</a></div>
+        <div class="legal"><a href="mentionlegal">Mentions légales</a></div>
         <div class="copyright">GoodGrade, site d'avis sécurisé</div>
 
     </div>

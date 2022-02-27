@@ -2,18 +2,18 @@
 <title>Connexion - GoodGrade</title>
 
 
-<link rel="shortcut icon" type="image/png" href="../src/favicon/favicon-32x32.png" />
+<link rel="shortcut icon" type="image/png" href="src/favicon/favicon-32x32.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<link href="../styles/login.css" rel="stylesheet">
-<link href="../styles/footer.css" rel="stylesheet">
+<link href="styles/login.css" rel="stylesheet">
+<link href="styles/footer.css" rel="stylesheet">
 
 <body>
 
-    <a href="../pages/home.php"> <img src="../src/Logo1.png" class="logo"></a>
+    <a href="home"> <img src="src/Logo1.png" class="logo"></a>
 
     <h1 class="title"> Se connecter </h1>
     <form class="loginplace" method="POST">
@@ -28,11 +28,11 @@
         <input name="login" type="submit" class="login" value="Se connecter">
 
     </form>
-    <a href="../pages/forgot.php" class="psw">Mot de passe oublié ?</a><br />
+    <a href="forgot" class="psw">Mot de passe oublié ?</a><br />
     <br />
     <br />
 
-    <a href="../pages/persoregister.php" class="already2">Je n'ai pas de compte ! </a>
+    <a href="persoregister" class="already2">Je n'ai pas de compte ! </a>
 
 </body>
 
@@ -43,10 +43,10 @@
 
     <div class="footer">
 
-        <div class="faq"><a href="../pages/faq.php">FAQ</a></div>
-        <a href="#top"> <img src="../src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
-        <div class="contact"><a href="../pages/contact.php">Nous contacter</a></div>
-        <div class="legal"><a href="../pages/mentionlegal.php">Mentions légales</a></div>
+        <div class="faq"><a href="faq">FAQ</a></div>
+        <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
+        <div class="contact"><a href="contact">Nous contacter</a></div>
+        <div class="legal"><a href="mentionlegal">Mentions légales</a></div>
         <div class="copyright">GoodGrade, site d'avis sécurisé</div>
 
     </div>

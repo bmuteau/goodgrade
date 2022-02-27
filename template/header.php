@@ -1,4 +1,4 @@
-<link href="../styles/header.css" rel="stylesheet">
+<link href="styles/header.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
 
 
 <section class="header">
-    <div class="left"><a href="../pages/home.php"><img src="../src/Logo1.png" class="logo"></a></div>
-    <div class="right"><a href="../pages/login.php">Connexion</a><br>
-        <a href="../pages/persoregister.php">Inscription</a>
+    <div class="left"><a href="home"><img src="src/Logo1.png" class="logo"></a></div>
+    <div class="right"><a href="login">Connexion</a><br>
+        <a href="persoregister">Inscription</a>
     </div>
 </section>
 
@@ -32,17 +32,17 @@
     <br />
     <br />
     <br />
-    <div> <a href="../pages/home.php">• Accueil </a> </div>
-    <div><a href="../pages/howtouse.php">• Comment ça marche ? </a></div>
-    <div><a href="../pages/faq.php">• FAQ </a></div>
+    <div> <a href="home">• Accueil </a> </div>
+    <div><a href="howtouse">• Comment ça marche ? </a></div>
+    <div><a href="faq">• FAQ </a></div>
     <br />
 
-    <div> <a href="../pages/contact.php">• Nous contacter</a></div>
-    <div><a href="../pages/mentionlegal.php">• Mentions légale </a></div>
-    <div><a href="../pages/confidentiality.php">• Politique de confidentialité</a></div>
+    <div> <a href="contact">• Nous contacter</a></div>
+    <div><a href="mentionlegal">• Mentions légale </a></div>
+    <div><a href="confidentiality">• Politique de confidentialité</a></div>
     <br />
 
 </div>
 
 
-<script src="../script/navbar.js"></script>
+<script src="script/navbar.js"></script>

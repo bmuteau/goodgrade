@@ -1,12 +1,12 @@
 <?php
-include '../template/header.php';
+include 'template/header.php';
 ?>
 <title>Accueil - GoodGrade</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="../styles/home.css" rel="stylesheet">
-<link href="../styles/footer.css" rel="stylesheet">
+<link href="styles/home.css" rel="stylesheet">
+<link href="styles/footer.css" rel="stylesheet">
 
 
 
@@ -24,7 +24,7 @@ include '../template/header.php';
 
         <form action="#" method="get">
             <input class="search" type="search" name="terme" placeholder="Rechercher un établissement">
-            <img src="../src/iconfinder_search_2561381.svg" class="submit">
+            <img src="src/iconfinder_search_2561381.svg" class="submit">
         </form>
 
 
@@ -37,14 +37,14 @@ include '../template/header.php';
             <label for="cr-1" style="--hue: 228"></label>
             <div class="ci" style="--z: 4">
                 <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">$Variable Name | $Variable note</h2>
-                <img class="img" src="../src/images.jpg" alt="resto1 ">
+                <img class="img" src="src/images.jpg" alt="resto1 ">
             </div>
 
             <input type="radio" name="a" id="cr-2">
             <label for="cr-2" style="--hue: 82"></label>
             <div class="ci" style="--z: 3">
                 <h2 class="ch" style="--h: 82; --s: 80%; --l: 90%">$Variable Name | $Variable note</h2>
-                <img class="img" src="../src/téléchargement.jpg" alt="resto2 ">
+                <img class="img" src="src/téléchargement.jpg" alt="resto2 ">
             </div>
 
             <input type="radio" name="a" id="cr-3">
@@ -82,12 +82,12 @@ include '../template/header.php';
 
     <div class="footer">
 
-        <div class="faq"><a href="../pages/faq.php">FAQ</a></div>
-        <a href="#top"> <img src="../src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
-        <div class="contact"><a href="../pages/contact.php">Nous contacter</a></div>
-        <div class="legal"><a href="../pages/mentionlegal.php">Mentions légales</a></div>
+        <div class="faq"><a href="faq">FAQ</a></div>
+        <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
+        <div class="contact"><a href="contact">Nous contacter</a></div>
+        <div class="legal"><a href="mentionlegal">Mentions légales</a></div>
         <div class="copyright">GoodGrade, site d'avis sécurisé</div>
 
     </div>
 </footer>
-<script src="../script/carousel.js"></script>
+<script src="script/carousel.js"></script>
