@@ -2,7 +2,7 @@
     var $slides = document.querySelectorAll('.slide');
     var $controls = document.querySelectorAll('.slider__control');
     var numOfSlides = $slides.length;
-    var slidingAT = 1300; // sync this with scss variable
+    var slidingAT = 1300; 
     var slidingBlocked = false;
 
     [].slice.call($slides).forEach(function($el, index) {

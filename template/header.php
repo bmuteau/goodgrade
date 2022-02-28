@@ -4,7 +4,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
 
 
 
@@ -12,8 +11,7 @@
 
 
 
-
-<link rel="shortcut icon" type="image/png" href="../src/favicon/favicon-32x32.png" />
+<link rel="shortcut icon" type="image/png" href="src/favicon/favicon-32x32.png" />
 
 
 <section class="header">
