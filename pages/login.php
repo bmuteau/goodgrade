@@ -1,3 +1,29 @@
+<?php
+
+global $hlp, $db;
+$result = -1;
+$error = "";
+$hlp->disconnected();
+
+if (isset($_POST['login'])) {
+    $result = $hlp->connexion($_POST['mail'], $_POST['password']);
+}
+if ($result > -1) {
+    if ($result == 0) {
+        header("location:home");
+    } else if ($result == 1) {
+        $error = " Le mot de passe est incorrect ! ";
+    } else if ($result == 2) {
+        $error = "Le compte n'existe pas !";
+    } else {
+        $error = "Il y'a une erreur de connexion!";
+    }
+}
+
+
+?>
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Connexion - GoodGrade</title>
 
@@ -24,7 +50,13 @@
         <input class="pass" name="password" type="password" placeholder="MOT DE PASSE" autocomplete="off" onclick="javascript:this.placeholder = '';" required><br />
 
 
-
+        <?php
+        if ($result > 0) {
+        ?>
+            <div class="error2"><?= $error ?></div>
+        <?php
+        }
+        ?>
         <input name="login" type="submit" class="login" value="Se connecter">
 
     </form>

@@ -1,3 +1,11 @@
+<?php
+
+global $hlp, $db;
+
+
+?>
+
+
 <link href="styles/header.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +24,20 @@
 
 <section class="header">
     <div class="left"><a href="home"><img src="src/Logo1.png" class="logo"></a></div>
-    <div class="right"><a href="login">Connexion</a><br>
-        <a href="persoregister">Inscription</a>
-    </div>
+
+    <?php if (isset($_SESSION['email'])) {
+        $login = $_SESSION['email'];
+    ?> <a href="profil"><img class="profil" src="src/iconfinder_customer_man_user_account_profile_1564534.svg"></a>
+    <?php } else {  ?>
+        <div class="right"><a href="login">Connexion</a><br>
+            <a href="persoregister">Inscription</a>
+        </div>
+    <?php  } ?>
+
+
+
+
+
 </section>
 
 <div class="menu-bg"></div>

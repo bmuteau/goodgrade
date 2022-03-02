@@ -40,6 +40,7 @@ class Database
     public static function checkconnexion()
     {
         $connect = self::connect();
+
         if ($connect == null) {
             return false;
         } else {

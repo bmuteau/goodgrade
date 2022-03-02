@@ -60,23 +60,30 @@ if (isset($_GET['url'])) {
     array_push($urlword, "");
 }
 
-// $connectionNeeded = array(
+$connectionNeeded = array(
 
-//     false,
-//     true,
-//     true,
-//     true,
-//     true,
-//     true,
-//     false,
-//     true,
-//     false,
-//     true,
-//     false,
-//     false,
-//     true,
-//     false,
-// );
+    false, // confidentiality
+    false, // contact
+    false, // etprofil
+    false, // inscriptionpro
+    false, // etregister
+    false, // faq
+    true, // favorite
+    false, // forgot
+    false, // home
+    false, // howtouse
+    false, // login
+    false, // mentionlegal
+    true, // paiementdone
+    false, //profil
+    true, //scannqrcode
+    false, // result
+    true, // subscription
+    true, // warning 
+    false, // register
+    false, // deconnexion
+
+);
 
 // $adminNeeded = array(
 
@@ -122,11 +129,11 @@ $urlsPossible = array(
     "resultat" => 15,
     "subscription" => 16,
     "abonnement" => 16,
-    "verificateaccount" => 17,
-    "warning" => 18,
-    "signalement" => 18,
-    "persoregister" => 19,
-    "register" => 19,
+    "warning" => 17,
+    "signalement" => 17,
+    "persoregister" => 18,
+    "register" => 18,
+    "deconnexion" => 19,
 
 
 
@@ -150,9 +157,9 @@ $filesPossible = array(
     "pages/scannqrcode.php",
     "pages/searchresult.php",
     "pages/subscription.php",
-    "pages/verificateaccount.php",
     "pages/warning.php",
     "pages/persoregister.php",
+    "pages/deconnexion.php",
 
 );
 
@@ -160,9 +167,9 @@ $filesPossible = array(
 
 if (count($urlword) > 0 && array_key_exists($urlword[0], $urlsPossible)) {
     $idUrl = $urlsPossible[$urlword[0]];
-    // if ($connectionNeeded[$idUrl] == true && $hlp->isConnected() == false) {
-    //     $idUrl = 6;
-    // }
+    if ($connectionNeeded[$idUrl] == true && $hlp->isConnected() == false) {
+        $idUrl = 6;
+    }
     // if ($adminNeeded[$idUrl] == true && $hlp->isAdmin() == false) {
     //     $idUrl = 0;
     // }

@@ -1,4 +1,7 @@
 <?php
+global $db, $hlp;
+
+
 include 'template/header.php';
 ?>
 <title>Mes adresses favorites - GoodGrade</title>
@@ -11,7 +14,7 @@ include 'template/header.php';
 <div id="top"></div>
 
 <body>
-    <h1 class="title">Mes adresses favorites </h1>
+    <h1 class="title">Mes adresses favorites <?= $_SESSION['pseudo'] ?> </h1>
 
     <ul class="favorite">
         <li>

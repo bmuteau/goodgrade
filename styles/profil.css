@@ -133,15 +133,15 @@ label {
   margin-left: 10px;
 }
 .list {
-  margin-left: 15%;
-  margin-top: 16px;
+  margin-left: -13%;
+  margin-top: -8px;
 }
 .favorite {
   width: 50%;
   margin-left: 26%;
   font-size: 21px;
   font-weight: bolder;
-  margin-top: -33px;
+  margin-top: -51px;
 }
 .footer {
   bottom: -149px;
@@ -214,6 +214,7 @@ label {
     left: 40%;
     top: 60%;
   }
+
   .number {
     margin-top: 0;
     margin-left: 6%;

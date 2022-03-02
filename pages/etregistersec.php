@@ -1,3 +1,26 @@
+<?php
+global $db, $hlp;
+$result = -1;
+$error = "";
+
+if (isset($_POST['send'])) {
+    $result = $hlp->prepareProPage($_SESSION[$email], $_POST['eta'], $_POST['description'], $_POST['website'], $_POST['adress'], $_POST['image'], $_POST['image2'], $_POST['image3']);
+}
+if ($result > -1) {
+    if ($result == 0) {
+        header("location:home");
+    } else if ($result == 1) {
+        $error = " Erreur ";
+    } else if ($result == 2) {
+        $error = "Erreur de connexion !";
+    } else {
+        $error = "La page n'a pas été créé!";
+    }
+}
+
+
+?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Créer sa page entreprise - GoodGrade</title>
 
@@ -17,7 +40,7 @@
 
     <h1 class="thanks"> Merci pour votre confiance </h1>
     <h2 class="desc">Pour créer la page de votre établissement, veuillez compléter les champs suivant :</h2>
-    <form>
+    <form method="POST">
 
         <select name="eta" id="et-select" required>
             <option value="">--Choisissez votre secteur--</option>
@@ -26,21 +49,31 @@
             <option value="hr">Hôtel-Restaurant</option>
 
         </select><br />
-        <textarea rows="5" cols="33" onclick="javascript:this.placeholder = '';" placeholder=" Presentez votre établissement en quelques lignes... " required></textarea><br />
-        <input type="url" onclick="javascript:this.placeholder = '';" placeholder="Votre site Web ou page Facebook" required> <br />
-        <input type="number" onclick="javascript:this.placeholder = '';" placeholder="Numéros de rue" required> <br />
-        <input type="text" onclick="javascript:this.placeholder = '';" placeholder="Nom de rue" required> <br />
+        <textarea name="description" rows="5" cols="33" onclick="javascript:this.placeholder = '';" placeholder=" Presentez votre établissement en quelques lignes... " required></textarea><br />
+        <input name="website" type="url" onclick="javascript:this.placeholder = '';" placeholder="Votre site Web ou page Facebook" required> <br />
+        <input name="adress" type="text" onclick="javascript:this.placeholder = '';" placeholder="Adresse" required> <br />
 
         <fieldset>
             <legend>Vos photos d'établissement</legend>
             <br />
-            <input type="file"><br />
-            <input type="file"><br />
-            <input type="file"><br />
+            <input name="image" type="file"><br />
+            <input name="image2" type="file"><br />
+            <input name="image3" type="file"><br />
             <p class="more">Pour ajouter plus de photos, merci de bien vouloir faire une demande directement par le formulaire de contact ! </p>
         </fieldset>
 
-        <input type="button" value="Envoyer" class="send">
+
+        <?php
+        if ($result > 0) {
+        ?>
+            <div class="error"><?= $error  ?></div>
+        <?php
+        }
+
+
+        ?>
+
+        <input name="send" type="submit" value="Envoyer" class="send">
 
         <form>
 </body>

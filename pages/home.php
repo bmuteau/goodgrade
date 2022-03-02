@@ -1,4 +1,7 @@
 <?php
+global $hlp, $db;
+
+
 include 'template/header.php';
 ?>
 <title>Accueil - GoodGrade</title>
@@ -28,7 +31,16 @@ include 'template/header.php';
         </form>
 
 
-        <h1 class="title">NOS RECOMMANDATIONS </h1>
+
+        <h1 class="title">NOS RECOMMANDATIONS <?php if ($hlp->isConnected() == true) { ?>
+
+                POUR <?= $_SESSION['pseudo'];
+                                                } ?>
+
+
+
+
+        </h1>
 
 
         <div class="c">

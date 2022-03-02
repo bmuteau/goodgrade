@@ -1,3 +1,27 @@
+<?php
+
+global $db, $hlp;
+$result = -1;
+$error = "";
+
+if (isset($_POST['sendregister'])) {
+    $result = $hlp->createAccountProOne($_POST['gerantname'], $_POST['etname'], $_POST['phone'], $_POST['email'], $_POST['password'], $_POST['postalcode']);
+}
+if ($result > -1) {
+    if ($result == 0) {
+        header("location:etregistersec");
+    } else if ($result == 1) {
+        $error = " Adresse mail déjà utilisée ! ";
+    } else if ($result == 2) {
+        $error = "Erreur de connexion !";
+    } else {
+        $error = "Le compte n'a pas été créé!";
+    }
+}
+
+
+?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscrire son établissement- GoodGrade</title>
 
@@ -26,14 +50,23 @@
         <br />
         <input name="phone" type="number" placeholder="NUMEROS DE TELEPHONE" onclick="javascript:this.placeholder = '';" required>
         <br />
-        <input name="mail" type="email" placeholder="EMAIL" autocomplete="off" onclick="javascript:this.placeholder = '';" requiered>
+        <input name="email" type="email" placeholder="EMAIL" autocomplete="off" onclick="javascript:this.placeholder = '';" requiered>
         <br />
         <input name="password" type="password" placeholder=" MOT DE PASSE" autocomplete="off" onclick="javascript:this.placeholder = '';" required>
         <br />
-        <input name="postal" type="number" placeholder="CODE POSTAL" onclick="javascript:this.placeholder = '';" required>
+        <input name="postalcode" type="number" placeholder="CODE POSTAL" onclick="javascript:this.placeholder = '';" required>
         <br />
 
 
+        <?php
+        if ($result > 0) {
+        ?>
+            <div class="error"><?= $error  ?></div>
+        <?php
+        }
+
+
+        ?>
 
         <input name="sendregister" type="submit" class="submitsend" value="S'inscrire"><br />
         <a href="login" class="already">J'ai déjà un compte ! </a>

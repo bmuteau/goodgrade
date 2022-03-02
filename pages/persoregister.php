@@ -1,3 +1,28 @@
+<?php
+
+global $db, $hlp;
+$result = -1;
+$error = "";
+
+if (isset($_POST['sendregister'])) {
+    $result = $hlp->createAccount($_POST['lastname'], $_POST['firstname'], $_POST['pseudo'], $_POST['email'], $_POST['password'], $_POST['postalcode'], isset($_POST['newsletter']));
+}
+if ($result > -1) {
+    if ($result == 0) {
+        header("location:home");
+    } else if ($result == 1) {
+        $error = " Adresse mail déjà utilisée ! ";
+    } else if ($result == 2) {
+        $error = "Erreur de connexion !";
+    } else {
+        $error = "Le compte n'a pas été créé!";
+    }
+}
+
+
+
+?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inscription - GoodGrade</title>
 
@@ -21,22 +46,31 @@
     <form method="POST">
         <p class="rules">Tous les champs sont obligatoires</p>
         <br />
-        <input name="lname" type="text" placeholder="NOM" onclick="javascript:this.placeholder = '';" required>
+        <input name="lastname" type="text" placeholder="NOM" onclick="javascript:this.placeholder = '';" required>
         <br />
-        <input name="fname" type="text" placeholder="PRENOM" onclick="javascript:this.placeholder = '';" required>
+        <input name="firstname" type="text" placeholder="PRENOM" onclick="javascript:this.placeholder = '';" required>
         <br />
         <input name="pseudo" type="text" placeholder="NOM D'UTILISATEUR" onclick="javascript:this.placeholder = '';" required>
         <br />
-        <input name="mail" type="email" placeholder="EMAIL" autocomplete="off" onclick="javascript:this.placeholder = '';" requiered>
+        <input name="email" type="email" placeholder="EMAIL" autocomplete="off" onclick="javascript:this.placeholder = '';" requiered>
         <br />
         <input name="password" type="password" placeholder=" MOT DE PASSE" autocomplete="off" onclick="javascript:this.placeholder = '';" required>
         <br />
-        <input name="postal" type="number" placeholder="CODE POSTAL" onclick="javascript:this.placeholder = '';" required>
+        <input name="postalcode" type="number" placeholder="CODE POSTAL" onclick="javascript:this.placeholder = '';" required>
         <br />
         <input name="newsletter" type="checkbox" id="newsletter">
+
         <label for="newsletter">J'accepte de recevoir des emails de l'équipe GoodGrade</label><br />
 
+        <?php
+        if ($result > 0) {
+        ?>
+            <div class="error"><?= $error  ?></div>
+        <?php
+        }
 
+
+        ?>
         <input name="sendregister" type="submit" class="submitsend" value="S'inscrire"><br />
         <a href="login" class="already">J'ai déjà un compte ! </a>
 

@@ -118,6 +118,12 @@ span {
   font-size: 45px;
   font-weight: bold;
 }
+.profil {
+  height: 40px;
+  position: relative;
+  left: 290%;
+  top: 13%;
+}
 /* RESPONSIVE  */
 
 @media (min-width: 426px) {
@@ -139,6 +145,9 @@ span {
   .header {
     grid-template-rows: 115px;
     height: 11%;
+  }
+  .profil {
+    left: 340%;
   }
 }
 

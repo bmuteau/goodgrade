@@ -45,6 +45,15 @@ label {
   height: 22px;
   margin-left: -105px;
 }
+.error {
+  position: absolute;
+
+  text-align: center;
+  width: 100%;
+  color: red;
+  font-weight: 900;
+  font-size: 20px;
+}
 .submitsend {
   background-image: linear-gradient(
     to right,
