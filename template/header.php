@@ -27,7 +27,15 @@ global $hlp, $db;
 
     <?php if (isset($_SESSION['email'])) {
         $login = $_SESSION['email'];
-    ?> <a href="profil"><img class="profil" src="src/iconfinder_customer_man_user_account_profile_1564534.svg"></a>
+    ?> <a href="profil"> <?php if (!empty($_SESSION['avatar'])) { ?>
+                <img class="profil" src="public/avatar/<?php echo $_SESSION['avatar']; ?> ">
+            <?php
+                            } else {
+            ?>
+                <img src="public/avatar/defaults/default.png">
+            <?php
+                            }
+            ?></a>
     <?php } else {  ?>
         <div class="right"><a href="login">Connexion</a><br>
             <a href="persoregister">Inscription</a>

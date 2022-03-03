@@ -30,8 +30,7 @@ class HelperFunctions
         }
         global $db;
 
-        $cle = rand(1000000, 9000000);
-        $email = $_POST['email'];
+
 
         $connect = $db->connect();
         if ($connect != null) {
@@ -176,11 +175,13 @@ class HelperFunctions
 
             if ($stmresult) {
                 if (password_verify($password, $stmresult['password'])) {
+                    $_SESSION['id'] = $stmresult['id'];
                     $_SESSION['email'] = $stmresult['email'];
                     $_SESSION['firstname'] = $stmresult['firstname'];
                     $_SESSION['lastname'] = $stmresult['lastname'];
                     $_SESSION['postalcode'] = $stmresult['postalcode'];
                     $_SESSION['pseudo'] = $stmresult['pseudo'];
+                    $_SESSION['avatar'] = $stmresult['avatar'];
                     $_SESSION['password'] = $password;
 
 
@@ -221,6 +222,27 @@ class HelperFunctions
 
         if (isset($_SESSION['password'])) {
             unset($_SESSION['password']);
+        }
+    }
+    public static function editInfo(string $pseudo, string $firstname, string $lastname, string $email, string $postalcode,  int $id)
+    {
+        global $db;
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("UPDATE users SET pseudo=?,firstname=?,lastname=?,email=?,postalcode=? WHERE id=? ");
+            $stm->execute(array(
+
+                $pseudo,
+                $firstname,
+                $lastname,
+                $email,
+                $postalcode,
+
+                $id,
+
+            ));
+            // header('location:profil');
+            $db->disconnect();
         }
     }
 }

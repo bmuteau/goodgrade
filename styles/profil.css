@@ -144,9 +144,15 @@ label {
   margin-top: -51px;
 }
 .footer {
-  bottom: -149px;
+  bottom: -200px;
 }
-
+.validate {
+  margin-left: 33%;
+  margin-top: 5%;
+}
+.avatar {
+  border-radius: 60px;
+}
 /* RESPONSIVE  */
 
 @media (min-width: 426px) {

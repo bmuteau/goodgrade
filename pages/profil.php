@@ -1,5 +1,9 @@
 <?php
 global $db, $hlp;
+
+
+
+
 include 'template/header.php';
 ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +20,28 @@ include 'template/header.php';
     <div class="container">
 
 
-        <div class="lname"><input type="text" placeholder="<?= $_SESSION['firstname'] ?>"></div>
-        <div class="fname"><input type="text" placeholder="<?= $_SESSION['lastname'] ?>"></div>
-        <div class="pseudos"><input type="text" placeholder="<?= $_SESSION['pseudo'] ?>"></div>
-        <div class="password"><input type="text" placeholder="* * * * *"></div>
-        <div class="postalcode"><input type="text" placeholder="<?= $_SESSION['postalcode'] ?>"></div>
-        <div class="picture"><img src="src/iconfinder_customer_man_user_account_profile_1564534.svg"><img src="src/editpen.svg" class="pen"></div>
+        <div class="lname"><input type="text" name='fname' placeholder="<?= $_SESSION['firstname'] ?>"></div>
+        <div class="fname"><input type="text" name='lname' placeholder="<?= $_SESSION['lastname'] ?>"></div>
+        <div class="pseudos"><input type="text" name='pseudo' placeholder="<?= $_SESSION['pseudo'] ?>"></div>
+        <div class="password"><input type="text" name='email' placeholder="<?= $_SESSION['email'] ?>"></div>
+        <div class="postalcode"><input type="text" name='postalcode' placeholder="<?= $_SESSION['postalcode'] ?>"></div>
+        <div class="picture">
+
+            <?php if (!empty($_SESSION['avatar'])) { ?>
+                <img class="avatar" src="public/avatar/<?php echo $_SESSION['avatar']; ?> " width="120px" height="120px">
+            <?php
+            } else {
+            ?>
+                <img src="public/avatar/defaults/default.png">
+            <?php
+            }
+            ?>
+
+        </div>
+
+
     </div>
+    <button type="submit" class="change" name="change"><a href="change">Changer mes informations</a> </button>
     <p class="number"><span>$Variable_AvisCompté</span> avis déposés</p>
 
     <label class="switch">
@@ -34,8 +53,11 @@ include 'template/header.php';
     <a class="deco" href="deconnexion"><input style="position: relative;
     left: 40%;
     top: 5%;" type="submit" value="se deconnecter"></a>
+
     <img src="src/iconfinder_arrow_arrow left_right_411.png" class="list">
     <p class="favorite"><a href="favorite">Retrouver mes lieux favoris</a></p>
+
+
 
 </body>
 <footer>

@@ -120,9 +120,12 @@ span {
 }
 .profil {
   height: 40px;
+  width: 40px;
   position: relative;
   left: 290%;
   top: 13%;
+  border: 1px solid #678983;
+  border-radius: 30px;
 }
 /* RESPONSIVE  */
 

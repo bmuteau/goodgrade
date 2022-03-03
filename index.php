@@ -75,13 +75,17 @@ $connectionNeeded = array(
     false, // login
     false, // mentionlegal
     true, // paiementdone
-    false, //profil
+    true, //profil
     true, //scannqrcode
     false, // result
     true, // subscription
     true, // warning 
     false, // register
     false, // deconnexion
+    false,
+    true,
+
+
 
 );
 
@@ -134,6 +138,8 @@ $urlsPossible = array(
     "persoregister" => 18,
     "register" => 18,
     "deconnexion" => 19,
+    "notfound" => 20,
+    "change" => 21,
 
 
 
@@ -160,6 +166,9 @@ $filesPossible = array(
     "pages/warning.php",
     "pages/persoregister.php",
     "pages/deconnexion.php",
+    "pages/notFound.php",
+    "pages/change.php",
+
 
 );
 
