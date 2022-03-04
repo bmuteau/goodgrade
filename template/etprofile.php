@@ -18,14 +18,25 @@
     <?php } ?>
 
 
+    <?php if ($hlp->isCompany() == false) { ?>
+        <img src="public/etimg/<?= $profils['image'] ?>" id="main">
+        <div id="thumbnails">
+            <img src="public/etimg/<?= $profils['image'] ?>">
+            <img src="public/etimg/<?= $profils['image2'] ?>">
+            <img src="public/etimg/<?= $profils['image3'] ?>">
 
-    <img src="public/etimg/<?= $image ?>" id="main">
-    <div id="thumbnails">
-        <img src="public/etimg/<?= $image ?>">
-        <img src="public/etimg/<?= $image2 ?>">
-        <img src="public/etimg/<?= $image3 ?>">
+        </div>
 
-    </div>
+    <?php  } else { ?>
+        <img src="public/etimg/<?= $image ?>" id="main">
+        <div id="thumbnails">
+            <img src="public/etimg/<?= $image ?>">
+            <img src="public/etimg/<?= $image2 ?>">
+            <img src="public/etimg/<?= $image3 ?>">
+
+        </div>
+    <?php } ?>
+
 
     <p class="description"><?= $_SESSION['description'] ?></h2>
 
