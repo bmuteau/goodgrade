@@ -112,15 +112,15 @@ class HelperFunctions
         }
         return 2; // pas de connexion a la bdd
     }
-    public static function prepareProPage(string $email, string $eta, string $description, string $website, string $adress, string $image, string $image2, string $image3)
+    public static function prepareProPage(string $eta, string $description, string $website, string $adress,  int $id)
     {
-        if (self::isProAccountExist($email)) {
+        if (self::isProAccountExist($id)) {
             return 1; // email existe deja
         }
         global $db;
         $connect = $db->connect();
         if ($connect != null) {
-            $stm = $connect->prepare("INSERT INTO company(eta,description,website,adress,image,image2,image3) VALUES (?,?,?,?,?,?,?)");
+            $stm = $connect->prepare("UPDATE company SET type=?,description=?,website=?,adress=? WHERE id=?");
 
             $stm->execute(array(
 
@@ -128,18 +128,14 @@ class HelperFunctions
                 $description,
                 $website,
                 $adress,
-                $image,
-                $image2,
-                $image3,
+                $id,
 
 
             ));
             var_dump($stm->errorInfo());
 
-
-
             $db->disconnect();
-            if (self::isProAccountExist($email)) {
+            if (self::isProAccountExist($id)) {
 
                 return 0; // aucun probleme
             }
@@ -149,7 +145,7 @@ class HelperFunctions
     }
     public static function isConnected(): bool
     {
-        if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['password'])) {
+        if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['password']) && isset($_SESSION['spec'])) {
             return true;
         }
         return false;
@@ -181,7 +177,8 @@ class HelperFunctions
                     $_SESSION['lastname'] = $stmresult['lastname'];
                     $_SESSION['postalcode'] = $stmresult['postalcode'];
                     $_SESSION['pseudo'] = $stmresult['pseudo'];
-                    $_SESSION['avatar'] = $stmresult['avatar'];
+                    $_SESSION['image'] = $stmresult['image'];
+                    $_SESSION['spec'] = $stmresult['spec'];
                     $_SESSION['password'] = $password;
 
 
@@ -195,19 +192,34 @@ class HelperFunctions
                 $stmresult = $stm->fetch();
                 if ($stmresult) {
                     if (password_verify($password, $stmresult['password'])) {
+                        $_SESSION['id'] = $stmresult['id'];
+                        $_SESSION['crdate'] = $stmresult['crdate'];
+                        $_SESSION['manager_name'] = $stmresult['manager_name'];
+                        $_SESSION['company_name'] = $stmresult['company_name'];
                         $_SESSION['email'] = $stmresult['email'];
-
+                        $_SESSION['phone'] = $stmresult['phone'];
+                        $_SESSION['adress'] = $stmresult['adress'];
+                        $_SESSION['postalcode'] = $stmresult['postalcode'];
+                        $_SESSION['type'] = $stmresult['type'];
+                        $_SESSION['image'] = $stmresult['image'];
+                        $_SESSION['image2'] = $stmresult['image2'];
+                        $_SESSION['image3'] = $stmresult['image3'];
+                        $_SESSION['description'] = $stmresult['description'];
+                        $_SESSION['website'] = $stmresult['website'];
+                        $_SESSION['spec'] = $stmresult['spec'];
                         $_SESSION['password'] = $password;
 
                         return 0; // tout est ok
                     } else {
                         return 1; // password incorect
+
                     }
                 }
             }
             return 2; // email erronné
         }
         return 3; // erreur avec de connexion avec la DB 
+
 
     }
     public static function disconnected()
@@ -241,8 +253,52 @@ class HelperFunctions
                 $id,
 
             ));
-            // header('location:profil');
+            header('location:profil');
             $db->disconnect();
         }
+    }
+    public static function addImage($image, $champ)
+    {
+        global $db;
+        $maxSize = 2097152;
+        $extensionsValid = array('jpg', 'jpeg', 'png', 'gif');
+
+        if (isset($image) and !empty($image['name'])) {
+            if ($image['size'] <= $maxSize) {
+                $extensionUpload = strtolower(substr(strrchr($image['name'], '.'), 1));
+                if (in_array($extensionUpload, $extensionsValid)) {
+                    $path = "public/etimg/" . $_SESSION['id'] . $champ . "." . $extensionUpload;
+                    $result = move_uploaded_file($image['tmp_name'], $path);
+                    if ($result) {
+                        $connect = $db->connect();
+
+                        if ($connect != null) {
+                            $updateavatar = $connect->prepare("UPDATE company SET $champ=:image WHERE id=:id");
+                            $updateavatar->execute(array(
+                                'image' => $_SESSION['id'] . "$champ" . "." . $extensionUpload,
+                                'id' => $_SESSION['id'],
+                            ));
+                            var_dump($updateavatar->errorInfo());
+                        } else {
+                            $msg = "Il y'a eu une erreur pendant l'importation de votre photo";
+                        }
+                    } else {
+                        $msg = "Votre photo de profil doit être dans un des formats jpg,png,jpeg ou gif !";
+                    }
+                } else {
+                    $msg = "Votre photo de profil ne doit pas dépasser 2Mo";
+                }
+            }
+        }
+    }
+    public static function isCompany()
+    {
+        if (self::isConnected() == false) {
+            return false;
+        }
+        if ($_SESSION['spec'] == 1) {
+            return true;
+        }
+        return false;
     }
 }

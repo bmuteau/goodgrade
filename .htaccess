@@ -7,4 +7,7 @@ php_value display_errors 1
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_DIRNAME} !-d
+# RewriteRule ^etprofile-([0-9]+)$ index.php?url=etprofile&id=$1 [NC,L]
 RewriteRule ^(.*)$ index.php?url=$1 [NC,L]
+
+

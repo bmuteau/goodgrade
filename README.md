@@ -6,5 +6,5 @@ Actual Version : 0.1
 
 TODO :
 
-Front-end : change.php ; avatar.php ;
-CSS -> 1 fichier
+Front-end : change.php , notFound.php ;
+CSS -> TOUT dans 1 fichier et rectifier le responsive et les dimensions

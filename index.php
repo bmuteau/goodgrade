@@ -64,7 +64,7 @@ $connectionNeeded = array(
 
     false, // confidentiality
     false, // contact
-    false, // etprofil
+    true, // etprofil
     false, // inscriptionpro
     false, // etregister
     false, // faq
@@ -111,7 +111,7 @@ $urlsPossible = array(
     "confidentiality" => 0,
     "confidentialite" => 0,
     "contact" => 1,
-    "etprofile" => 2, // mettre la variable de nom en fonction de la recherche ?
+    "etprofile" => 2,
     "inscriptionpro" => 3,
     "etregister" => 3,
     "etregistersec" => 4,
@@ -125,7 +125,7 @@ $urlsPossible = array(
     "login" => 10,
     "mentionlegal" => 11,
     "paiementdone" => 12,
-    "profil" => 13,
+    "profile" => 13,
     "scannqrcode" => 14,
     "generator" => 14,
     "result" => 15,
@@ -146,28 +146,29 @@ $urlsPossible = array(
 );
 
 $filesPossible = array(
-    "pages/confidentiality.php",
-    "pages/contact.php",
-    "pages/etprofile.php",
-    "pages/etregister.php",
-    "pages/etregistersec.php",
-    "pages/faq.php",
-    "pages/favorite.php",
-    "pages/forgot.php",
-    "pages/home.php",
-    "pages/howtouse.php",
-    "pages/login.php",
-    "pages/mentionlegal.php",
-    "pages/paiementdone.php",
-    "pages/profil.php",
-    "pages/scannqrcode.php",
-    "pages/searchresult.php",
-    "pages/subscription.php",
-    "pages/warning.php",
-    "pages/persoregister.php",
-    "pages/deconnexion.php",
-    "pages/notFound.php",
-    "pages/change.php",
+    "controller/confidentiality.php",
+    "controller/contact.php",
+    "controller/etprofile.php",
+    "controller/etregister.php",
+    "controller/etregistersec.php",
+    "controller/faq.php",
+    "controller/favorite.php",
+    "controller/forgot.php",
+    "controller/home.php",
+    "controller/howtouse.php",
+    "controller/login.php",
+    "controller/mentionlegal.php",
+    "controller/paiementdone.php",
+    "controller/profil.php",
+    "controller/scannqrcode.php",
+    "controller/searchresult.php",
+    "controller/subscription.php",
+    "controller/warning.php",
+    "controller/persoregister.php",
+    "controller/deconnexion.php",
+    "controller/notFound.php",
+    "controller/change.php",
+
 
 
 );
