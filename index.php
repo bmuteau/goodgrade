@@ -84,6 +84,7 @@ $connectionNeeded = array(
     false, // deconnexion
     false,
     true,
+    true,
 
 
 
@@ -140,6 +141,7 @@ $urlsPossible = array(
     "deconnexion" => 19,
     "notfound" => 20,
     "change" => 21,
+    "newmdp" => 22,
 
 
 
@@ -168,6 +170,7 @@ $filesPossible = array(
     "controller/deconnexion.php",
     "controller/notFound.php",
     "controller/change.php",
+    "controller/newmdp.php",
 
 
 

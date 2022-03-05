@@ -41,7 +41,9 @@
         <span class="slider round"></span>
     </label>
     <p class="anonym">Passer le compte en mode anonyme</p>
-
+    <a class="changemdp" href="newmdp"><input style="position: relative;
+    left: 40%;
+    top: 5%;" type="submit" value="changer son mdp"></a>
     <a class="deco" href="deconnexion"><input style="position: relative;
     left: 40%;
     top: 5%;" type="submit" value="se deconnecter"></a>

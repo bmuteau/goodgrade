@@ -6,5 +6,5 @@ Actual Version : 0.1
 
 TODO :
 
-Front-end : change.php , notFound.php ;
+Front-end : change.php , notFound.php, newmdp.php ;
 CSS -> TOUT dans 1 fichier et rectifier le responsive et les dimensions

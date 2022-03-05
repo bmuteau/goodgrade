@@ -44,4 +44,4 @@ if (isset($_POST['save'])) {
     $result = $hlp->editInfo($_POST['lname'], $_POST['fname'], $_POST['pseudo'], $_POST['email'], $_POST['postalcode'], $_SESSION['id']);
 }
 
-include 'change';
+include 'template/change.php';

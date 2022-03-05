@@ -25,7 +25,7 @@
                     <?php endif; ?>
 
                 <?php else : ?>
-                    <img src="public/avatar/defaults/default.png">
+                    <img class="profil" src="public/avatar/defaults/default.png">
                 <?php endif;   ?></a>
 
             <?php } else {  ?>

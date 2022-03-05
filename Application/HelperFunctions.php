@@ -257,6 +257,22 @@ class HelperFunctions
             $db->disconnect();
         }
     }
+    public static function newMdp(string $password, int $id)
+    {
+        global $db;
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("UPDATE users SET password=? WHERE id=? ");
+            $stm->execute(array(
+
+                password_hash($password, PASSWORD_DEFAULT),
+                $id,
+
+            ));
+            header('location:profil');
+            $db->disconnect();
+        }
+    }
     public static function addImage($image, $champ)
     {
         global $db;
