@@ -49,37 +49,15 @@ input::placeholder {
 }
 
 .list {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr 5fr 10px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   top: 66%;
   position: absolute;
-  width: 87%;
+  width: 46%;
   font-size: 15px;
-  margin-top: 10%;
+  margin-top: 19%;
+  left: 32%;
   list-style: none;
 }
 
-.last1 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.last2 {
-  grid-area: 2 / 2 / 3 / 3;
-}
-.last3 {
-  grid-area: 3 / 2 / 4 / 3;
-}
-.last4 {
-  grid-area: 1 / 4 / 2 / 5;
-}
-.last5 {
-  grid-area: 2 / 4 / 3 / 5;
-}
-.last6 {
-  grid-area: 3 / 4 / 4 / 5;
-}
 /* slider */
 .c {
   height: 200px;

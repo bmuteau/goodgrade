@@ -66,16 +66,14 @@
 
         </div>
         <h1 class="new">NOUVEAUX ETABLISSEMENTS INSCRITS </h1>
-
         <ul class="list">
-            <li class="last1"><a href="etprofile-39">et1</a></li>
-            <li class="last2">$Variable Nom2</li>
-            <li class="last3">$Variable Nom3</li>
-            <li class="last4">$Variable Nom4</li>
-            <li class="last5">$Variable Nom5</li>
-            <li class="last6">$Variable Nom6</li>
-        </ul>
+            <?php foreach ($last as $lasts) : ?>
 
+                <?= '<a href="etprofile">' . '<li>' . $lasts['company_name'] . '</a>' . '</li>' ?>
+
+            <?php endforeach ?>
+
+        </ul>
 
     </div>
 </body>

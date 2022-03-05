@@ -317,4 +317,7 @@ class HelperFunctions
         }
         return false;
     }
+    public static function getLastCompany()
+    {
+    }
 }

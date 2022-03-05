@@ -36,6 +36,9 @@ if ($connect != null) {
     $query->execute(array($getid));
     $posts = $query->fetchAll();
 }
+
+
+
 // si l'id avec la session n'est pas determiné alors récupéré les informations 
 if ($connect != null) {
     $query = $connect->prepare("SELECT company_name,phone,adress,description,website,company.image,image2,image3,note,avis,pseudo 
