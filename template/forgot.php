@@ -22,14 +22,26 @@
         <form method="post">
             <div class="container">
                 <label for="email">Saisir votre adresse mail </label><br />
-                <input type="email" placeholder="Entrer votre adresse mail" name="email" required><br />
+                <input type="email" placeholder="Entrer votre adresse mail" name="email" required>
                 <button type="submit">Envoyer un mot de passe aléatoire</button>
             </div>
             <a href="login" class="log">Se connecter</a>
+            <?php
+            if ($messageE || $messageG != "") {
+            ?>
+                <div class="message">
 
-    </div>
+                    <?= $messageE ?>
+                </div>
+                <div class="messageG">
 
-    </form>
+                    <?= $messageG ?>
+                </div>
+            <?php
+            }
+            ?>
+        </form>
+        </form>
     </div>
 
 </body>

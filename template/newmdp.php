@@ -12,7 +12,7 @@
     <form method="POST">
 
         <label>Changer le mot de passe</label>
-        <input type="text" name="newpass" value="Saisir votre nouveau mot de passe">
+        <input type="text" name="newpass" onclick="javascript:this.placeholder = '';" placeholder="Saisir votre nouveau mot de passe">
         <input type="submit" name="send" value="Changer le mot de passe">
 
     </form>
