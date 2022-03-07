@@ -69,7 +69,7 @@
         <ul class="list">
             <?php foreach ($last as $lasts) : ?>
 
-                <?= '<a href="etprofile">' . '<li>' . $lasts['company_name'] . '</a>' . '</li>' ?>
+                <?= '<a href="etprofile?id=' . $lasts['id'] . ' ">' . '<li>' . $lasts['company_name'] . '</a>' . '</li>' ?>
 
             <?php endforeach ?>
 

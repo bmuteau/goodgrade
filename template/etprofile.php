@@ -1,5 +1,5 @@
 <head>
-    <title> <?= $title ?>- GoodGrade</title>
+    <title> <?= $companyData['name'] ?>- GoodGrade</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +11,7 @@
 <div id="top"></div>
 
 <body>
-    <h1 class="title"> <?= $title ?></h1>
+    <h1 class="title"> <?= $companyData['name'] ?></h1>
     <?php if ($hlp->isCompany()) {
     } else { ?>
         <img src="src/iconfinder_favorite_heart_like_love_valentine_290111.svg" class="favorite">
@@ -19,31 +19,31 @@
 
 
     <?php if ($hlp->isCompany() == false) { ?>
-        <img src="public/etimg/<?= $profils['image'] ?>" id="main">
+        <img src="public/etimg/<?= $companyData['firstimg'] ?>" id="main">
         <div id="thumbnails">
-            <img src="public/etimg/<?= $profils['image'] ?>">
-            <img src="public/etimg/<?= $profils['image2'] ?>">
-            <img src="public/etimg/<?= $profils['image3'] ?>">
+            <img src="public/etimg/<?= $companyData['firstimg'] ?>">
+            <img src="public/etimg/<?= $companyData['secimg'] ?>">
+            <img src="public/etimg/<?= $companyData['thirdimg'] ?>">
 
         </div>
 
     <?php  } else { ?>
-        <img src="public/etimg/<?= $image ?>" id="main">
+        <img src="public/etimg/<?= $companyData['firstimg'] ?>" id="main">
         <div id="thumbnails">
-            <img src="public/etimg/<?= $image ?>">
-            <img src="public/etimg/<?= $image2 ?>">
-            <img src="public/etimg/<?= $image3 ?>">
+            <img src="public/etimg/<?= $companyData['firstimg'] ?>">
+            <img src="public/etimg/<?= $companyData['secimg'] ?>">
+            <img src="public/etimg/<?= $companyData['thirdimg'] ?>">
 
         </div>
     <?php } ?>
 
 
-    <p class="description"><?= $_SESSION['description'] ?></h2>
+    <p class="description"><?= $companyData['desc'] ?></h2>
 
     <div class="picto">
-        <a class="phone" href="tel:<?= $_SESSION['phone'] ?>"> <img src="src/iconfinder_local_phone_352510.svg"> </a>
-        <a class="web" href="<?= $_SESSION['website'] ?>"> <img src="src/iconfinder_language_web_326663.svg"></a>
-        <a class="gps" href="https://maps.google.com/maps?q=<?= $_SESSION['adress'] ?>"><img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg"></a>
+        <a class="phone" href="tel:<?= $companyData['tel'] ?>"> <img src="src/iconfinder_local_phone_352510.svg"> </a>
+        <a class="web" href="<?= $companyData['www'] ?>"> <img src="src/iconfinder_language_web_326663.svg"></a>
+        <a class="gps" href="https://maps.google.com/maps?q=<?= $companyData['gps'] ?>"><img src="src/iconfinder_adress_gps_location_pin_position_1564524.svg"></a>
     </div>
 
     <div class="nbr">

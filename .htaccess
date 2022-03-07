@@ -1,13 +1,9 @@
 
-# HTID:18812371: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
-php_value display_errors 1
-# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:18812371:
 
+php_flag output_buffering true
 
 RewriteEngine on
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_DIRNAME} !-d
-# RewriteRule ^etprofile-([0-9]+)$ index.php?url=etprofile&id=$1 [NC,L]
 RewriteRule ^(.*)$ index.php?url=$1 [NC,L]
-
-

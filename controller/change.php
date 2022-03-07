@@ -3,7 +3,6 @@
 global $db, $hlp;
 
 
-
 if (isset($_FILES['avatar']) and !empty($_FILES['avatar']['name'])) {
     $maxSize = 2097152;
     $extensionsValid = array('jpg', 'jpeg', 'png', 'gif');
@@ -38,6 +37,7 @@ if (isset($_POST['save'])) {
     $_SESSION['pseudo'] = $_POST['pseudo'];
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['postalcode'] = $_POST['postalcode'];
+
 
 
 

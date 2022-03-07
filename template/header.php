@@ -15,11 +15,11 @@
         $login = $_SESSION['email'];
     ?> <a href="profile">
             <?php if ($hlp->isCompany() == true) { ?>
-                <a href="etprofile"> <?php } ?>
+                <a href="etprofile<?= '?id=' . $_SESSION['id'] ?>"> <?php } ?>
 
                 <?php if (isset($_SESSION['image']) && !empty($_SESSION['image'])) : ?>
                     <?php if ($hlp->isCompany() == true) : ?>
-                        <img class="profil" src="public/etimg/<?= $image ?>?> ">
+                        <img class=" profil" src="public/etimg/<?= $_SESSION['image'] ?> ">
                     <?php else : ?>
                         <img class="profil" src="public/avatar/<?php echo $_SESSION['image']; ?> ">
                     <?php endif; ?>

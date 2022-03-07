@@ -64,7 +64,7 @@ $connectionNeeded = array(
 
     false, // confidentiality
     false, // contact
-    true, // etprofil
+    false, // etprofil
     false, // inscriptionpro
     false, // etregister
     false, // faq
@@ -171,9 +171,6 @@ $filesPossible = array(
     "controller/notFound.php",
     "controller/change.php",
     "controller/newmdp.php",
-
-
-
 );
 
 

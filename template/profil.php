@@ -34,7 +34,7 @@
 
     </div>
     <button type="submit" class="change" name="change"><a href="change">Changer mes informations</a> </button>
-    <p class="number"><span>$Variable_AvisCompté</span> avis déposés</p>
+    <p class="number"><span><?= $count['count'] ?></span> avis déposés</p>
 
     <label class="switch">
         <input type="checkbox">
