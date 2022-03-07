@@ -10,7 +10,7 @@ if (isset($_FILES['avatar']) and !empty($_FILES['avatar']['name'])) {
         $extensionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
         if (in_array($extensionUpload, $extensionsValid)) {
             $path = "public/avatar/" . $_SESSION['id'] . "." . $extensionUpload;
-            $result = move_uploaded_file($_FILES['avatar']['tmp_name'], $path); // 1par image
+            $result = move_uploaded_file($_FILES['avatar']['tmp_name'], $path);
             if ($result) {
                 $connect = $db->connect();
                 if ($connect != null) {
@@ -19,7 +19,12 @@ if (isset($_FILES['avatar']) and !empty($_FILES['avatar']['name'])) {
                         'image' => $_SESSION['id'] . "." . $extensionUpload,
                         'id' => $_SESSION['id'],
                     ));
-                    header('location:profil');
+
+                    if (isset($_POST['save'])) {
+
+                        $_SESSION['image'] = $_SESSION['id'];
+                        header('location:profile');
+                    }
                 } else {
                     $msg = "Il y'a eu une erreur pendant l'importation de votre photo";
                 }

@@ -20,7 +20,7 @@
         <div class="picture">
 
             <?php if (!empty($_SESSION['image'])) { ?>
-                <img class="avatar" src="public/avatar/<?php echo $_SESSION['image']; ?> " width="120px" height="120px">
+                <img class="avatar" src="public/avatar/<?= $_SESSION['image']; ?> " width="120px" height="120px">
             <?php
             } else {
             ?>
