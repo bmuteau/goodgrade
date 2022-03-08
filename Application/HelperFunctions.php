@@ -348,4 +348,37 @@ class HelperFunctions
         }
         return null;
     }
+    public static function pushQrcode(string $idcompany, string $userid)
+    {
+        global $db;
+
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("INSERT INTO avis(id_company,id_user) VALUES (?,?)");
+            $stm->execute(array(
+                $idcompany,
+                $userid,
+
+            ));
+        }
+    }
+    public static function idInfo(string $id): array
+    {
+        global $db;
+        $connect = $db->connect();
+        $res = array();
+
+        if ($connect == null) {
+            return $res;
+        }
+        $intId = intval($id);
+        $stm = $connect->prepare("SELECT * FROM avis WHERE id=?");
+        $stm->execute(array($intId));
+        $resStm = $stm->fetch();
+        if ($resStm) {
+            $res = $resStm;
+        }
+        $db->disconnect();
+        return $res;
+    }
 }

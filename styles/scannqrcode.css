@@ -59,6 +59,10 @@ li {
   list-style-type: decimal;
   font-size: 22px;
 }
+.qrcodes {
+  height: 150px;
+  margin-left: 30%;
+}
 /* RESPONSIVE  */
 
 @media (min-width: 426px) {

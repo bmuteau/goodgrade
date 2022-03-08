@@ -18,7 +18,9 @@
     <p class="center">Déposer un avis </p>
 
     <div class="wrapper">
-        <img src="src/téléchargement (1).png" class="qrcode"> <!-- sera changer par le générateur -->
+        <?php echo "<img class='qrcodes' src='" . $file . "' />"; ?>
+        <button class="dl"><a href='public/qrcode/62273cbe96a01.png' download="qrcode">Télécharger son QrCode </a></button>
+
         <div class="rules">
             <ul>
                 <li>Scanne le QrCode</li>

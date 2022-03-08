@@ -6,7 +6,5 @@ Actual Version : 0.1
 
 TODO :
 
-Front-end : change.php , notFound.php, newmdp.php ;
+Front-end : change.php , notFound.php, newmdp.php , qrcodescanner.php ;
 CSS -> TOUT dans 1 fichier et rectifier le responsive et les dimensions
-
-# RewriteRule ^etprofile-([0-9]+)$ index.php?url=etprofile&id=$1 [NC,L]

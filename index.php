@@ -85,6 +85,8 @@ $connectionNeeded = array(
     false,
     true,
     true,
+    true,
+    true,
 
 
 
@@ -142,6 +144,8 @@ $urlsPossible = array(
     "notfound" => 20,
     "change" => 21,
     "newmdp" => 22,
+    "choice" => 23,
+    "qrcodescanner" => 24,
 
 
 
@@ -171,6 +175,8 @@ $filesPossible = array(
     "controller/notFound.php",
     "controller/change.php",
     "controller/newmdp.php",
+    "controller/choice.php",
+    "controller/qrcodescanner.php",
 );
 
 
