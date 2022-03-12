@@ -5,15 +5,15 @@ const canvasElement = document.getElementById("qr-canvas");
 const canvas = canvasElement.getContext("2d");
 
 const qrResult = document.getElementById("qr-result");
-const outputData = document.getElementById("outputData");
+const outputData = document.getElementById("outputData")
 const btnScanQR = document.getElementById("btn-scan-qr");
 
 let scanning = false;
 
 qrcode.callback = (res) => {
   if (res) {
-    outputData.innerText = res;
-    scanning = false;
+    document.getElementById("outputData").value=res;
+    scanning = false; 
 
     video.srcObject.getTracks().forEach(track => {
       track.stop();

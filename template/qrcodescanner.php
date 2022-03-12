@@ -16,15 +16,36 @@
     <div id="container">
         <h1>QR Code Scanner</h1>
 
-        <a id="btn-scan-qr"> Scanner un qrcode
+
+
+
+        <h1>Avant de passer à l'étape suivante, veuillez vérifier les informations suivante : </h1>
+        <a id="btn-scan-qr">
+            Scanner un QrCode
             <a />
+
+
 
             <canvas hidden="" id="qr-canvas"></canvas>
 
             <div id="qr-result" hidden="">
-                <b>Data:</b> <span id="outputData"></span>
+
             </div>
     </div>
+
+
+
+    <form method="POST">
+        <label>Votre pseudo</label> </br>
+        <input type="text" name="iduser" value="<?= $_SESSION['pseudo']  ?>" disabled></br>
+
+        <label>Le nom de l'établissement</label></br>
+        <input type="text" name="company_name" id="outputData" value="" disabled></br>
+        <input type="submit" name="validId" value="OK">
+    </form>
+
+    </div>
+
 
     <script src="script/qrCodeScanner.js"></script>
 

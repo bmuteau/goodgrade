@@ -24,7 +24,7 @@ class HelperFunctions
     }
     public static function createAccount(string $pseudo, string $firstname, string $lastname, string $email, string $password, string $postalcode, int $newsletter)
     {
-        var_dump($newsletter);
+
         if (self::isAccountExist($email)) {
             return 1; // email existe deja
         }
@@ -180,6 +180,7 @@ class HelperFunctions
                     $_SESSION['pseudo'] = $stmresult['pseudo'];
                     $_SESSION['image'] = $stmresult['image'];
                     $_SESSION['spec'] = $stmresult['spec'];
+                    $_SESSION['admin'] = $stmresult['admin'];
                     $_SESSION['password'] = $password;
 
 
@@ -209,7 +210,7 @@ class HelperFunctions
                         $_SESSION['description'] = $stmresult['description'];
                         $_SESSION['website'] = $stmresult['website'];
                         $_SESSION['spec'] = $stmresult['spec'];
-
+                        $_SESSION['id_subscription'] = $stmresult['id_subscription'];
                         $_SESSION['password'] = $password;
 
                         return 0; // tout est ok
@@ -348,16 +349,33 @@ class HelperFunctions
         }
         return null;
     }
-    public static function pushQrcode(string $idcompany, string $userid)
+    public static function pushQrcode(string $id_user)
     {
         global $db;
 
         $connect = $db->connect();
         if ($connect != null) {
-            $stm = $connect->prepare("INSERT INTO avis(id_company,id_user) VALUES (?,?)");
+            $stm = $connect->prepare("INSERT INTO avis(id_user) VALUES (?)");
             $stm->execute(array(
-                $idcompany,
-                $userid,
+                $id_user,
+
+            ));
+            var_dump($stm->errorInfo());
+        }
+        return;
+    }
+    public static function postAvis(string $avis, string $note, string $used, int $id)
+    {
+        global $db;
+
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("UPDATE avis SET avis=?,note=?,used=1 WHERE id=?");
+            $stm->execute(array(
+                $avis,
+                $note,
+                $used,
+                $id,
 
             ));
         }
@@ -372,7 +390,7 @@ class HelperFunctions
             return $res;
         }
         $intId = intval($id);
-        $stm = $connect->prepare("SELECT * FROM avis WHERE id=?");
+        $stm = $connect->prepare("SELECT company_name FROM company WHERE id=?");
         $stm->execute(array($intId));
         $resStm = $stm->fetch();
         if ($resStm) {
@@ -380,5 +398,27 @@ class HelperFunctions
         }
         $db->disconnect();
         return $res;
+    }
+    public static function isSubscribed()
+    {
+        if (self::isCompany() == false) {
+            return false;
+        }
+        if ($_SESSION['id_subscription'] > 0) {
+            return true;
+        }
+    }
+    public static function selectReport()
+    {
+        global $db;
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("SELECT * FROM avis WHERE id= ? ");
+            $stm->execute();
+        }
+    }
+    public static function warningReport()
+    {
+        // recuperer les avis avec la table report=1
     }
 }

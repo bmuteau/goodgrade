@@ -10,7 +10,16 @@
 
 <body>
     <h1>Déposer un avis maintenant</h1> <br />
-    <h1>Conserver le QrCode pour plus tard </h1>
+    <input type="submit" name="save" value="Conserver votre QrCode pour plus tard">
+    <form method="POST">
+        <p>$image1 entreprise</p>
+        <label for="">NOTE</label><br />
+        <input name="note" type="number" min="1" max="5"><br />
+        <label for="">AVIS</label><br />
+        <textarea name="avis"></textarea><br />
+
+        <input type="submit" name="send" value="ENVOYER">
+    </form>
 </body>
 
 </html>

@@ -34,18 +34,6 @@
                 </div>
             <?php  } ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </section>
 
 <div class="menu-bg"></div>
@@ -56,16 +44,26 @@
     <br />
     <br />
     <br />
-    <br />
+    <?php if ($hlp->isAdmin() == true) { ?>
+        <div><a href="backoffice">• Espace Admin </a></div>
+    <?php  } ?>
     <div> <a href="home">• Accueil </a> </div>
     <div><a href="howtouse">• Comment ça marche ? </a></div>
     <div><a href="faq">• FAQ </a></div>
-    <br />
+
+    <?php if ($hlp->isSubscribed() == true) { ?>
+        <div><a href="scannqrcode">• Mes QrCodes</div>
+    <?php  }
+    if ($hlp->isSubscribed() == false) { ?>
+    <?php  }
+    if ($hlp->isConnected() == true) { ?>
+        <div><a href="qrcodescanner">• Scanner un QrCode </a></div>
+    <?php  } ?>
 
     <div> <a href="contact">• Nous contacter</a></div>
     <div><a href="mentionlegal">• Mentions légale </a></div>
     <div><a href="confidentiality">• Politique de confidentialité</a></div>
-    <br />
+
 
 </div>
 

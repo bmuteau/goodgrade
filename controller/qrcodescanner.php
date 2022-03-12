@@ -1,8 +1,13 @@
 <?php
+global $hlp, $db;
 
-global $db, $hlp;
 
 
+
+
+if (isset($_POST['validId'])) {
+    $result = $hlp->pushQrcode($_SESSION['id']);
+}
 
 
 include 'template/qrcodescanner.php';
