@@ -92,6 +92,8 @@ $connectionNeeded = array(
 
 
 
+
+
 );
 
 // $adminNeeded = array(
@@ -153,6 +155,7 @@ $urlsPossible = array(
 
 
 
+
 );
 
 $filesPossible = array(
@@ -183,6 +186,7 @@ $filesPossible = array(
     "controller/qrcodescanner.php",
     "controller/identityqrcode.php",
     "controller/backoffice.php",
+
 );
 
 

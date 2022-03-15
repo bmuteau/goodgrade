@@ -408,17 +408,4 @@ class HelperFunctions
             return true;
         }
     }
-    public static function selectReport()
-    {
-        global $db;
-        $connect = $db->connect();
-        if ($connect != null) {
-            $stm = $connect->prepare("SELECT * FROM avis WHERE id= ? ");
-            $stm->execute();
-        }
-    }
-    public static function warningReport()
-    {
-        // recuperer les avis avec la table report=1
-    }
 }
