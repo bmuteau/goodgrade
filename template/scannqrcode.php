@@ -19,7 +19,7 @@
 
     <div class="wrapper">
         <?php echo "<img class='qrcodes' src='" . $file . "' />"; ?>
-        <button class="dl"><a href='public/qrcode/622a06a0493ec.png' download="qrcode">Télécharger son QrCode </a></button>
+        <button class="dl"><a href='public/qrcode/6230c92f6de81.png' download="qrcode">Télécharger son QrCode </a></button>
 
         <div class="rules">
             <ul>

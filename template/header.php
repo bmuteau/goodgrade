@@ -47,6 +47,8 @@
     <?php if ($hlp->isAdmin() == true) { ?>
         <div><a href="backoffice">• Espace Admin </a></div>
     <?php  } ?>
+    <?php if ($hlp->isAdmin() == false) {
+    } ?>
     <div> <a href="home">• Accueil </a> </div>
     <div><a href="howtouse">• Comment ça marche ? </a></div>
     <div><a href="faq">• FAQ </a></div>

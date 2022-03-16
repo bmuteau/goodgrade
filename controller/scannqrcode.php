@@ -1,7 +1,7 @@
 <?php
 global $db, $hlp;
 
-$id = $_SESSION['company_name'];
+$id = $_SESSION['id'];
 
 require_once('lib/phpqrcode/qrlib.php');
 

@@ -212,6 +212,8 @@ class HelperFunctions
                         $_SESSION['spec'] = $stmresult['spec'];
                         $_SESSION['id_subscription'] = $stmresult['id_subscription'];
                         $_SESSION['password'] = $password;
+                        $_SESSION['admin'] = $stmresult['admin'];
+
 
                         return 0; // tout est ok
                     } else {
@@ -349,37 +351,6 @@ class HelperFunctions
         }
         return null;
     }
-    public static function pushQrcode(string $id_user)
-    {
-        global $db;
-
-        $connect = $db->connect();
-        if ($connect != null) {
-            $stm = $connect->prepare("INSERT INTO avis(id_user) VALUES (?)");
-            $stm->execute(array(
-                $id_user,
-
-            ));
-            var_dump($stm->errorInfo());
-        }
-        return;
-    }
-    public static function postAvis(string $avis, string $note, string $used, int $id)
-    {
-        global $db;
-
-        $connect = $db->connect();
-        if ($connect != null) {
-            $stm = $connect->prepare("UPDATE avis SET avis=?,note=?,used=1 WHERE id=?");
-            $stm->execute(array(
-                $avis,
-                $note,
-                $used,
-                $id,
-
-            ));
-        }
-    }
     public static function idInfo(string $id): array
     {
         global $db;
@@ -390,9 +361,10 @@ class HelperFunctions
             return $res;
         }
         $intId = intval($id);
-        $stm = $connect->prepare("SELECT company_name FROM company WHERE id=?");
+        $stm = $connect->prepare("SELECT * FROM company WHERE id=?");
         $stm->execute(array($intId));
         $resStm = $stm->fetch();
+
         if ($resStm) {
             $res = $resStm;
         }
@@ -406,6 +378,23 @@ class HelperFunctions
         }
         if ($_SESSION['id_subscription'] > 0) {
             return true;
+        }
+    }
+    public static function addAvis(int $id, int $note)
+    {
+        global $db;
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("UPDATE avis SET note=? WHERE id=?");
+            $stm->execute(array(
+
+                $note,
+                // $avis,,avis=?
+
+                $id,
+
+
+            ));
         }
     }
 }
