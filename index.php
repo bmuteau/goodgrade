@@ -153,6 +153,7 @@ $urlsPossible = array(
     "qrcodescanner" => 24,
     "identity" => 25,
     "backoffice" => 26,
+    "edit" => 27,
 
 
 
@@ -187,6 +188,8 @@ $filesPossible = array(
     "controller/qrcodescanner.php",
     "controller/identityqrcode.php",
     "controller/backoffice.php",
+    "controller/edit.php",
+
 
 );
 

@@ -1,4 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="Refresh" content="30;"> -->
+
+
 <title>Mon générateur GoodGrade - GoodGrade</title>
 
 
@@ -19,7 +22,6 @@
 
     <div class="wrapper">
         <?php echo "<img class='qrcodes' src='" . $file . "' />"; ?>
-        <button class="dl"><a href='public/qrcode/6230c92f6de81.png' download="qrcode">Télécharger son QrCode </a></button>
 
         <div class="rules">
             <ul>

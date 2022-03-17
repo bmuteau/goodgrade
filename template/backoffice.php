@@ -18,11 +18,14 @@
                 <ul>
                     <?php foreach ($warning as $warnings) : ?>
 
-                        <?= "<li>" . "<h2> Avis : </h2>" . $warnings['avis'] . "</br>" .
+                        <?=
+                        "<li>" .
+                            "<h2> Avis : </h2>" . $warnings['avis'] . "</br>" .
                             "<h2> Note : </h2>" . $warnings['note'] . "</br>" .
                             "<a href='backoffice?id=$warnings[0]'>X</a></br>" . // Supprimer
-                            "<a href='backoffice?id=$warnings[0]'> V</a></br>" . // Editer
-                            "</li>"                ?>
+                            "<a href='edit?id=$warnings[0]'> V</a></br>" . // Editer
+                            "</li>"
+                        ?>
 
                     <?php endforeach ?>
                 </ul>
@@ -54,7 +57,7 @@
                     <?= '<li>' .
                         '<h2> Avis : </h2>' . $avi['avis'] . '</br>' .
                         '<h2> Note : </h2>' . $avi['note']  . '</br>' .
-                        '<h2> Etablissement : </h2>' . $avi['company_name'] . '</br>' .
+                        '<h2> Etablissement : </h2>' . $avi['id_company'] . '</br>' .
                         '<h2> Utilisateur n° : </h2>' . $avi['id_user']  .
                         '</li>' ?>
 

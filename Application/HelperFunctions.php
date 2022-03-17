@@ -380,21 +380,4 @@ class HelperFunctions
             return true;
         }
     }
-    public static function addAvis(int $id, int $note)
-    {
-        global $db;
-        $connect = $db->connect();
-        if ($connect != null) {
-            $stm = $connect->prepare("UPDATE avis SET note=? WHERE id=?");
-            $stm->execute(array(
-
-                $note,
-                // $avis,,avis=?
-
-                $id,
-
-
-            ));
-        }
-    }
 }

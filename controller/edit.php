@@ -1,6 +1,10 @@
 <?php
 
-global $db;
+
+
+
+
+global $db, $hlp;
 $id = $hlp->myGet('id');
 
 $connect = $db->connect();
@@ -26,11 +30,9 @@ if ($connect != null) {
     $stm->execute();
     $avis = $stm->fetchAll();
 
-    $stm = $connect->prepare("DELETE FROM avis WHERE id=$id LIMIT 1");
+    $stm = $connect->prepare("UPDATE avis SET report=0 WHERE id = $id");
     $stm->execute();
 }
-
-
 
 
 include 'template/backoffice.php';

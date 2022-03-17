@@ -7,8 +7,9 @@ require_once('lib/phpqrcode/qrlib.php');
 
 
 
+
 $path = "public/qrcode/";
-$file = $path . uniqid() . ".png";
+$file = $path . date('U') . ".png";
 
 
 
