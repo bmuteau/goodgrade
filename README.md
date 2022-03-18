@@ -6,5 +6,5 @@ Actual Version : 0.1
 
 TODO :
 
-Front-end : change.php , notFound.php, newmdp.php , qrcodescanner.php,backoffice.php ;
+Front-end : change.php , notFound.php, newmdp.php , qrcodescanner.php,backoffice.php, home.php ( resultat de recherche) ;
 CSS -> TOUT dans 1 fichier et rectifier le responsive et les dimensions
