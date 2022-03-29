@@ -42,6 +42,7 @@ if ($hlp->myGet('id') != null) {
 }
 
 
+
 $connect = $db->connect();
 if ($connect != null) {
 

@@ -14,8 +14,12 @@
     <h1 class="title"> <?= $companyData['name'] ?></h1>
     <?php if ($hlp->isCompany()) {
     } else { ?>
+
         <img src="src/iconfinder_favorite_heart_like_love_valentine_290111.svg" class="favorite">
     <?php } ?>
+
+
+
 
 
     <?php if ($hlp->isCompany() == false) { ?>

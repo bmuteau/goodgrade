@@ -27,7 +27,7 @@ if ($result > -1) {
     } else if ($result == 2) {
         $error = "Erreur de connexion !";
     } else {
-        // header("location:home");
+        header("location:home");
     }
 }
 

@@ -48,8 +48,7 @@
     left: 40%;
     top: 5%;" type="submit" value="se deconnecter"></a>
 
-    <img src="src/iconfinder_arrow_arrow left_right_411.png" class="list">
-    <p class="favorite"><a href="favorite">Retrouver mes lieux favoris</a></p>
+
 
 
 

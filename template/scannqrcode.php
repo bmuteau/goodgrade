@@ -21,7 +21,7 @@
     <p class="center">Déposer un avis </p>
 
     <div class="wrapper">
-        <?php echo "<img class='qrcodes' src='" . $file . "' />"; ?>
+        <?= "<img class='qrcodes' src='" . $file . "' />"; ?>
 
         <div class="rules">
             <ul>
