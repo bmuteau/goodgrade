@@ -61,7 +61,6 @@
     <ul>
         <?php foreach ($posts as $post) : ?>
             <li class="avis">
-                <div class="profil"><img src="public/avatar/<?= $post['image'] ?>" class="img"></div>
                 <div class="name"><?= $post['pseudo'] ?></div>
                 <div class="post"><?= $post['avis'] ?></div>
                 <div class="warning">

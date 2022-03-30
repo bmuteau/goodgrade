@@ -58,6 +58,7 @@
                         '<h2> Avis : </h2>' . $avi['avis'] . '</br>' .
                         '<h2> Note : </h2>' . $avi['note']  . '</br>' .
                         '<h2> Etablissement : </h2>' . $avi['id_company'] . '</br>' .
+                        '<h2> Date : </h2>' . $avi['crdate'] . '</br>' .
                         '<h2> Utilisateur n° : </h2>' . $avi['id_user']  .
                         '</li>' ?>
 

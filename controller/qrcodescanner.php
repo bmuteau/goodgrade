@@ -8,7 +8,12 @@ $note = "";
 $avis = "";
 
 $id_company = $_SESSION['userTargetId'];
-$id_user = $_SESSION['id'];
+
+if (empty($id_user)) {
+    $id_user = "";
+} else {
+    $id_user = $_POST['name'];
+}
 
 
 

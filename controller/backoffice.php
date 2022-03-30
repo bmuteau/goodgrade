@@ -14,7 +14,7 @@ if ($connect != null) {
     $stm->execute();
     $order = $stm->fetchAll();
 
-    $stm = $connect->prepare("SELECT * FROM user ORDER BY id DESC LIMIT 0,6 ");
+    $stm = $connect->prepare("SELECT * FROM users ORDER BY id DESC LIMIT 0,6 ");
     $stm->execute();
     $register = $stm->fetchAll();
 

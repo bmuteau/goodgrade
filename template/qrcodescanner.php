@@ -34,9 +34,10 @@
                 <img src="public/etimg/<?= $company_img ?>">
                 <form method="POST">
                     <label>Votre pseudo:</label><br />
-                    <input type="text" value="<?= $_SESSION['pseudo'] ?>" disabled><br />
+                    <label for="name" onclick="javascript:this.placeholder = 'Anonyme';">Cliquer sur votre pseudo pour être anonyme</label></br>
+                    <input type=" text" id="name" name="name" placeholder="<?= $_SESSION['pseudo'] ?>" onclick="javascript:this.placeholder = 'Anonyme';" readonly="readonly"><br />
                     <label>Nom de l'établissement:</label><br />
-                    <input type="text" value="<?= $company_name ?>" disabled> </br>
+                    <input type=" text" value="<?= $company_name ?>" disabled> </br>
                     <label for="note">NOTE</label><br />
                     <input name="note" type="number" min="1" max="5"><br />
                     <label for="avis">AVIS</label><br />

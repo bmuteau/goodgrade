@@ -9,7 +9,6 @@ $stm = $connect->prepare("SELECT company_name,id FROM company ORDER BY id DESC L
 $stm->execute();
 $last = $stm->fetchAll();
 
-// $allCompany = $connect->query('SELECT company_name FROM company ORDER BY id DESC');
 $allCompany = "";
 if ($hlp->myGet('q') != null) {
     $q = htmlspecialchars($hlp->myGet('q'));
