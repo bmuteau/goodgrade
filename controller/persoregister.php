@@ -9,7 +9,6 @@ if (isset($_POST['sendregister'])) {
 }
 if ($result > -1) {
     if ($result == 0) {
-        header('location:home');
     } else if ($result == 1) {
         $error = " Adresse mail déjà utilisée ! ";
     } else if ($result == 2) {
@@ -18,7 +17,4 @@ if ($result > -1) {
         $error = "Le compte n'a pas été créé!";
     }
 }
-
-
-
 include 'template/persoregister.php';

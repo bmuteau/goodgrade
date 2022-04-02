@@ -48,12 +48,10 @@ class HelperFunctions
 
             ));
 
-
-            var_dump($stm->errorInfo());
             $db->disconnect();
             if (self::isAccountExist($email)) {
                 self::connexion($email, $password);
-
+                header('location:home');
                 return 0; // aucun probleme
             }
             return 3; // erreur a la creation
@@ -98,14 +96,10 @@ class HelperFunctions
 
 
             ));
-            var_dump($stm->errorInfo());
-
-
-
             $db->disconnect();
             if (self::isProAccountExist($email)) {
                 self::connexion($email, $password);
-
+                header("location:etregistersec");
                 return 0; // aucun probleme
             }
             return 3; // erreur a la creation
@@ -135,7 +129,7 @@ class HelperFunctions
 
             $db->disconnect();
             if (self::isProAccountExist($id)) {
-
+                header("location:home");
                 return 0; // aucun probleme
             }
             return 3; // erreur a la creation
@@ -300,7 +294,6 @@ class HelperFunctions
                                 'image' => $_SESSION['id'] . "$champ" . "." . $extensionUpload,
                                 'id' => $_SESSION['id'],
                             ));
-                            var_dump($updateavatar->errorInfo());
                         } else {
                             $msg = "Il y'a eu une erreur pendant l'importation de votre photo";
                         }

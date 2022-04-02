@@ -28,45 +28,41 @@
 
         <?php if ($hlp->myGet('q') == null) { ?>
 
-            <h1 class="title">NOS RECOMMANDATIONS
+            <h1 class="title">NOS RECOMMANDATIONS </h1>
+
+            <div class="bestResto">
+
+                <h2 class="subtitle">Les restaurants du moment </h2>
 
 
+                <?php foreach ($rest as $rests) : ?>
 
-
-            </h1>
-
-
-            <div class="c">
-
-                <input type="radio" name="a" id="cr-1" checked>
-                <label for="cr-1" style="--hue: 228"></label>
-                <div class="ci" style="--z: 4">
-                    <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">$Variable Name | $Variable note</h2>
-                    <img class="img" src="src/images.jpg" alt="resto1 ">
-                </div>
-
-                <input type="radio" name="a" id="cr-2">
-                <label for="cr-2" style="--hue: 82"></label>
-                <div class="ci" style="--z: 3">
-                    <h2 class="ch" style="--h: 82; --s: 80%; --l: 90%">$Variable Name | $Variable note</h2>
-                    <img class="img" src="src/téléchargement.jpg" alt="resto2 ">
-                </div>
-
-                <input type="radio" name="a" id="cr-3">
-                <label for="cr-3" style="--hue: 40"></label>
-                <div class="ci" style="--z: 2">
-                    <h2 class="ch" style="--h: 40; --s: 100%; --l: 89%">In the mountains?</h2>
-                    <img class="img" src="https://images.unsplash.com/photo-1518805629729-3e55b81b2393?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=700" alt="Mountains and houses">
-                </div>
-
-                <input type="radio" name="a" id="cr-4">
-                <label for="cr-4" style="--hue: 210"></label>
-                <div class="ci" style="--z: 1">
-                    <h2 class="ch" style="--h: 210; --s: 70%; --l: 90%">Above looks beautiful?</h2>
-                    <img class="img" src="https://images.unsplash.com/photo-1488831948116-38bc1351c6d6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=700" alt="Sky and mountains">
-                </div>
+                    <p class="result">
+                        <?=
+                        $rests['company_name'] . $rests['nombre'] . round($rests['note'], 1, PHP_ROUND_HALF_EVEN) . $rests['postalcode'] ?>
+                    </p>
+                    <img src="public/avatar/<?php echo $rests['image'] ?>">
+                <?php endforeach ?>
 
             </div>
+
+            <div class="bestHotel">
+
+                <h2 class="subtitle">Les hôtels du moment </h2>
+
+
+                <?php foreach ($hotel as $hotels) : ?>
+
+                    <p class="result">
+                        <?=
+                        $hotels['company_name'] . $hotels['nombre'] . round($hotels['note'], 1, PHP_ROUND_HALF_EVEN) . $rests['postalcode'] ?>
+                    </p>
+                    <img src="public/avatar/<?php echo $hotels['image'] ?>">
+                <?php endforeach ?>
+
+            </div>
+
+
             <h1 class="new">NOUVEAUX ETABLISSEMENTS INSCRITS </h1>
             <ul class="list">
                 <?php foreach ($last as $lasts) : ?>
@@ -117,4 +113,3 @@
 
     </div>
 </footer>
-<script src="script/carousel.js"></script>

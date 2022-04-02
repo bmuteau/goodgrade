@@ -66,5 +66,8 @@ if ($connect != null) {
 
 
 
+
+
+
 include 'template/header.php';
 include 'template/etprofile.php';

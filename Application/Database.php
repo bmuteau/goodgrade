@@ -13,7 +13,7 @@ class Database
 
     // Connexion Local 
     private static $dbHost = "localhost";
-    private static $dbName = "goodgrade";
+    private static $dbName = "goodgrade3";
     private static $dbUsername = "root";
     private static $dbPassword = "";
 
