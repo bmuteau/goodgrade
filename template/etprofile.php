@@ -65,7 +65,7 @@
                 <div class="post"><?= $post['avis'] ?></div>
                 <div class="warning">
                     <?php if ($hlp->isCompany() == true) { ?>
-                        SIGNALER
+                        <?= "<a href='etprofile?id=$post[0]'>SIGNALER</a>" ?>
                     <?php } ?>
 
                 </div>

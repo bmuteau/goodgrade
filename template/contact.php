@@ -12,16 +12,30 @@
 
     <h1 class="contacte">Nous contacter </h1>
 
-    <form>
-        <input type="text" placeholder="Nom" onclick="javascript:this.placeholder = '';"> <br />
-        <input type="text" placeholder="Prénom" onclick="javascript:this.placeholder = '';"><br />
-        <input type="email" placeholder="Email" onclick="javascript:this.placeholder = '';" required><br />
-        <input type="text" placeholder="Titre" onclick="javascript:this.placeholder = '';"><br />
-        <textarea rows="5" cols="33" required> Entrer votre message </textarea><br />
-        <input type="submit" class="submit" placeholder="Envoyer ">
+    <form method="POST">
+        <input type="text" name="name" placeholder="Nom" onclick="javascript:this.placeholder = '';"> <br />
+        <input type="text" name="firstname" placeholder="Prénom" onclick="javascript:this.placeholder = '';"><br />
+        <input type="email" name="email" placeholder="Email" onclick="javascript:this.placeholder = '';" required><br />
+        <input type="text" name="object" placeholder="Titre" onclick="javascript:this.placeholder = '';"><br />
+        <textarea rows="5" name="message" cols="33" required> Entrer votre message </textarea><br />
+        <input type="submit" name="send" class="submit" placeholder="Envoyer ">
 
     </form>
+    <?php
 
+    if ($sent == true) {
+
+
+
+    ?>
+
+        <div class="validateMail">
+            <p>Le mail à bien été envoyé ! </p>
+        </div>
+
+    <?php
+    }
+    ?>
 </body>
 <footer>
 

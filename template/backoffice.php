@@ -14,22 +14,20 @@
 
     <fieldset>
         <div class="warning">SIGNALEMENT
-            <form method="POST">
-                <ul>
-                    <?php foreach ($warning as $warnings) : ?>
+            <ul>
+                <?php foreach ($warning as $warnings) : ?>
 
-                        <?=
-                        "<li>" .
-                            "<h2> Avis : </h2>" . $warnings['avis'] . "</br>" .
-                            "<h2> Note : </h2>" . $warnings['note'] . "</br>" .
-                            "<a href='backoffice?id=$warnings[0]'>X</a></br>" . // Supprimer
-                            "<a href='edit?id=$warnings[0]'> V</a></br>" . // Editer
-                            "</li>"
-                        ?>
+                    <?=
+                    "<li>" .
+                        "<h2> Avis : </h2>" . $warnings['avis'] . "</br>" .
+                        "<h2> Note : </h2>" . $warnings['note'] . "</br>" .
+                        "<a href='backoffice?id=$warnings[0]'>X</a></br>" . // Supprimer
+                        "<a href='edit?id=$warnings[0]'> V</a></br>" . // Editer
+                        "</li>"
+                    ?>
 
-                    <?php endforeach ?>
-                </ul>
-            </form>
+                <?php endforeach ?>
+            </ul>
         </div>
     </fieldset>
 

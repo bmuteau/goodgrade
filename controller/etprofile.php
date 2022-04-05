@@ -1,9 +1,11 @@
 <?php
 global $db, $hlp;
 
+$id = $hlp->myGet('id');
 $userAccount = false;
 
 $companyData = array(
+    'id' => "",
     'name' => "",
     'firstimg' => "",
     'secimg' => "",
@@ -14,7 +16,6 @@ $companyData = array(
     'gps' => "",
 
 );
-
 if ($hlp->myGet('id') != null) {
     $change = $hlp->getCompanyModel($hlp->myGet('id'));
     $userAccount = true;
@@ -44,6 +45,9 @@ if ($hlp->myGet('id') != null) {
 
 
 $connect = $db->connect();
+
+
+
 if ($connect != null) {
 
     $note =  $connect->prepare("SELECT avg (note) AS moyenne FROM avis  WHERE id_company=? ");
@@ -57,16 +61,15 @@ if ($connect != null) {
     $nombre = $avis->fetch();
 }
 if ($connect != null) {
-    $query = $connect->prepare("SELECT * FROM avis INNER JOIN users ON avis.id_user=users.id  WHERE id_company=?");
+    $query = $connect->prepare("SELECT * FROM avis INNER JOIN users ON avis.id_user=users.id  WHERE id_company=? AND report=0");
     $query->execute(array($companyData['uid']));
     $posts = $query->fetchAll();
 }
 
-
-
-
-
-
+if ($connect != null) {
+    $stm = $connect->prepare("UPDATE avis SET report=1 WHERE id = $id");
+    $stm->execute();
+}
 
 
 include 'template/header.php';
