@@ -62,98 +62,88 @@ if (isset($_GET['url'])) {
 
 $connectionNeeded = array(
 
-    false, // confidentiality
+    false, // notfound
     false, // contact
     false, // etprofil
     false, // inscriptionpro
     false, // etregister
     false, // faq
-    true, // favorite
     false, // forgot
     false, // home
     false, // howtouse
     false, // login
     false, // mentionlegal
-    true, // paiementdone
-    true, //profil
-    true, //scannqrcode
-    false, // result
-    true, // subscription
-    true, // warning 
+    false, //profil
+    false, //scannqrcode
+    false, // subscription
     false, // register
     false, // deconnexion
-    false,
-    true,
-    true,
-    true,
-    true,
-    false,
-    false,
-    false,
-
-
-
+    false, // confidentiality
+    false, // change
+    false, //newmdp
+    true, // qrcodescanner
+    false, //backoffice
 
 
 );
 
-// $adminNeeded = array(
+$adminNeeded = array(
 
-//     false,
-//     false,
-//     false,
-//     false,
-//     true,
-//     true,
-//     false,
-//     false,
-//     false,
-//     true,
-//     false,
-//     true,
-//     false,
-//     false,
+    false, // notfound
+    false, // contact
+    false, // etprofil
+    false, // inscriptionpro
+    false, // etregister
+    false, // faq
+    false, // forgot
+    false, // home
+    false, // howtouse
+    false, // login
+    false, // mentionlegal
+    false, //profil
+    false, //scannqrcode
+    false, // subscription
+    false, // register
+    false, // deconnexion
+    false, // confidentiality
+    false, // change
+    false, //newmdp
+    false, // qrcodescanner
+    true, //backoffice
 
-// );
+
+);
+
+
 $urlsPossible = array(
-    "confidentiality" => 0,
-    "confidentialite" => 0,
+    "notfound" => 0,
     "contact" => 1,
     "etprofile" => 2,
     "inscriptionpro" => 3,
     "etregister" => 3,
     "etregistersec" => 4,
     "faq" => 5,
-    "favorite" => 6,
-    "forgot" => 7,
-    "home" => 8,
-    "" => 8,
-    "howtouse" => 9,
-    "utilisation" => 9,
-    "login" => 10,
-    "mentionlegal" => 11,
-    "paiementdone" => 12,
-    "profile" => 13,
-    "scannqrcode" => 14,
-    "generator" => 14,
-    "result" => 15,
-    "searchresult" => 15,
-    "resultat" => 15,
-    "subscription" => 16,
-    "abonnement" => 16,
-    "warning" => 17,
-    "signalement" => 17,
-    "persoregister" => 18,
-    "register" => 18,
-    "deconnexion" => 19,
-    "notfound" => 20,
-    "change" => 21,
-    "newmdp" => 22,
-    "choice" => 23,
-    "qrcodescanner" => 24,
-    "identity" => 25,
-    "backoffice" => 26,
-    "edit" => 27,
+    "forgot" => 6,
+    "home" => 7,
+    "" => 7,
+    "howtouse" => 8,
+    "utilisation" => 8,
+    "login" => 9,
+    "mentionlegal" => 10,
+    "profil" => 11,
+    "scannqrcode" => 12,
+    "generator" => 12,
+    "subscription" => 13,
+    "abonnement" => 13,
+    "persoregister" => 14,
+    "register" => 14,
+    "deconnexion" => 15,
+    "confidentiality" => 16,
+    "confidentialite" => 16,
+    "change" => 17,
+    "newmdp" => 18,
+    "qrcodescanner" => 19,
+    "backoffice" => 20,
 
 
 
@@ -162,34 +152,27 @@ $urlsPossible = array(
 );
 
 $filesPossible = array(
-    "controller/confidentiality.php",
-    "controller/contact.php",
-    "controller/etprofile.php",
-    "controller/etregister.php",
-    "controller/etregistersec.php",
-    "controller/faq.php",
-    "controller/favorite.php",
-    "controller/forgot.php",
-    "controller/home.php",
-    "controller/howtouse.php",
-    "controller/login.php",
-    "controller/mentionlegal.php",
-    "controller/paiementdone.php",
-    "controller/profil.php",
-    "controller/scannqrcode.php",
-    "controller/searchresult.php",
-    "controller/subscription.php",
-    "controller/warning.php",
-    "controller/persoregister.php",
-    "controller/deconnexion.php",
-    "controller/notFound.php",
-    "controller/change.php",
-    "controller/newmdp.php",
-    "controller/choice.php",
-    "controller/qrcodescanner.php",
-    "controller/identityqrcode.php",
-    "controller/backoffice.php",
-    "controller/edit.php",
+    "controller/notFound.php", //0
+    "controller/contact.php", //1
+    "controller/etprofile.php", //2
+    "controller/etregister.php", //3
+    "controller/etregistersec.php", //4
+    "controller/faq.php", //5
+    "controller/forgot.php", //6
+    "controller/home.php", //7
+    "controller/howtouse.php", //8
+    "controller/login.php", //9
+    "controller/mentionlegal.php", //10
+    "controller/profil.php", //11
+    "controller/scannqrcode.php", //12
+    "controller/subscription.php", //13
+    "controller/persoregister.php", //14
+    "controller/deconnexion.php", //15
+    "controller/confidentiality.php", //16
+    "controller/change.php", //17
+    "controller/newmdp.php", //18
+    "controller/qrcodescanner.php", //19
+    "controller/backoffice.php", //20
 
 
 );
@@ -199,11 +182,11 @@ $filesPossible = array(
 if (count($urlword) > 0 && array_key_exists($urlword[0], $urlsPossible)) {
     $idUrl = $urlsPossible[$urlword[0]];
     if ($connectionNeeded[$idUrl] == true && $hlp->isConnected() == false) {
-        $idUrl = 6;
+        $idUrl = 17;
     }
-    // if ($adminNeeded[$idUrl] == true && $hlp->isAdmin() == false) {
-    //     $idUrl = 0;
-    // }
+    if ($adminNeeded[$idUrl] == true && $hlp->isAdmin() == false) {
+        $idUrl = 0;
+    }
     $_SESSION['pageid'] = $idUrl;
     require $filesPossible[$idUrl];
 } else {

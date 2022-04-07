@@ -1,21 +1,25 @@
 <?php
 global $db, $hlp;
 
-$id = $_SESSION['id'];
+if ($hlp->isSubscribed() == true) {
+    $id = $_SESSION['id'];
 
-require_once('lib/phpqrcode/qrlib.php');
-
-
-
-
-$path = "public/qrcode/";
-$file = $path . date('U') . ".png";
-
-
-
-QRcode::png($id, $file);
+    require_once('lib/phpqrcode/qrlib.php');
 
 
 
 
-include 'template/scannqrcode.php';
+    $path = "public/qrcode/";
+    $file = $path . date('U') . ".png";
+
+
+
+    QRcode::png($id, $file);
+
+
+
+
+    include 'template/scannqrcode.php';
+} else {
+    header('location:subscription');
+}
