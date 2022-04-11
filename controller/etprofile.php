@@ -56,7 +56,7 @@ if ($connect != null) {
 }
 
 if ($connect != null) {
-    $avis = $connect->prepare("SELECT COUNT(*) AS nombre FROM avis WHERE id_company=?");
+    $avis = $connect->prepare("SELECT COUNT(*) AS nombre FROM avis WHERE id_company=? AND report=0");
     $avis->execute(array($companyData['uid']));
     $nombre = $avis->fetch();
 }
@@ -66,9 +66,19 @@ if ($connect != null) {
     $posts = $query->fetchAll();
 }
 
-if ($connect != null) {
-    $stm = $connect->prepare("UPDATE avis SET report=1 WHERE id = $id");
-    $stm->execute();
+
+if (isset($_POST['warning'])) {
+    $report = $_POST['value'];
+    $avisId = $posts[0][0];
+
+    if ($connect != null) {
+        $stm = $connect->prepare("UPDATE avis SET report=$report WHERE id=$avisId");
+        $stm->execute();
+        $db->disconnect();
+        header('location:etprofile?id=$id');
+    }
+    $_SESSION['report'] = $report;
+    $result = $hlp->warning($_POST['value']);
 }
 
 

@@ -65,7 +65,10 @@
                 <div class="post"><?= $post['avis'] ?></div>
                 <div class="warning">
                     <?php if ($hlp->isCompany() == true) { ?>
-                        <?= "<a href='etprofile?id=$post[0]'>SIGNALER</a>" ?>
+                        <form method="POST">
+                            <input type="text" value='1' name="value" hidden>
+                            <input type="submit" name="warning" value="signaler">
+                        </form>
                     <?php } ?>
 
                 </div>
