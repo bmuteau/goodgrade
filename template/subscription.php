@@ -41,32 +41,39 @@
     </ul>
 
 
-    <form>
+    <div class="howtosubscribed">
 
-        <label class="label">
-            Sélectionner l'abonnement qui vous convient:
-        </label> <br />
-        <div class="check">
-            <input type="radio" id="subsall" name="subsall">
-            <label for="subsall">L'abonnement tout inclus</label> <br />
-            <input type="radio" id="subsno" name="subsall">
-            <label for="subsno">L'abonnement sans engagement</label>
-        </div>
+        <p> Pour souscrire à un abonnement, merci de remplir le formulaire ci-joint, nous prendrons contact avec vous ! </p>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Nom" onclick="javascript:this.placeholder = '';"> <br />
+            <input type="email" name="email" placeholder="Email" onclick="javascript:this.placeholder = '';" required><br />
+            <input type="tel" name="tel" placeholder="Numéros de téléphone" onclick="javascript:this.placeholder = '';" required><br />
+            <label>Choisir un abonnement : </label></br>
+            <select name="subscription" id="subs">
+                <option value="tout-inclus">Tout inclus</option>
+                <option value="sans-engagement">Sans engagement</option>
+            </select></br>
+            <input type="submit" name="send" class="submit" placeholder="Envoyer ">
 
-        <label class="label">
-            Entrer vos informations de livraison
-        </label> <br />
-        <div class="info">
-            <input type="text" placeholder="NOM DE L'ETABLISSEMENT" onclick="javascript:this.placeholder = '';" required><br />
-            <input type="text" placeholder="ADRESSE" onclick="javascript:this.placeholder = '';" required><br />
-            <input type="text" placeholder="CODE POSTAL" onclick="javascript:this.placeholder = '';" required><br />
-            <input type="text" placeholder="VILLE" onclick="javascript:this.placeholder = '';" required><br />
-            <input type="text" placeholder="NUMEROS DE TELEPHONE" onclick="javascript:this.placeholder = '';" required><br />
-            <input type="submit" class="next" value="SUIVANT"> <br />
-        </div>
-    </form>
+        </form>
+        <?php
 
-    <div class="paiement" style="visibility: hidden;">FORMULAIRE DE PAIEMENT</div>
+        if ($sent == true) {
+
+
+
+        ?>
+
+            <div class="validateMail">
+                <p>Nous avons bien reçu votre demande, nous allons vous recontacter très rapidement ! </p>
+            </div>
+
+        <?php
+        }
+        ?>
+    </div>
+
+
 </body>
 
 <footer>
