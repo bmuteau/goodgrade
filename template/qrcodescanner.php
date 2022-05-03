@@ -30,6 +30,15 @@
 
             <?php if (isset($_SESSION['company_name'])) {
             ?>
+                <h1>Avant de déposer votre avis, merci de bien lire les quelques règles de bonne usage: </h1>
+                <ul>
+                    <li>En cas d'avis négatif, expliquer ce qui selon vous aurait était meilleur à faire.</li>
+                    <li>N'utiliser pas de mots vulguaire.</li>
+                    <li>Respecter l'établissement qui vous a reçu, même si votre experience n'a pas était très bonne.</li>
+                    <li>Eviter le language SMS.</li>
+                </ul>
+
+                <h2>Voilà, si votre commentaire respecte ses quelques règles, votre avis ne risque aucune suppression et vous pourrez aider d'autre internaute.</h2>
                 <h2>Merci de bien vouloir verifier les informations avant de cliquer sur suivant !</h2>
                 <img src="public/etimg/<?= $company_img ?>">
                 <form method="POST">
