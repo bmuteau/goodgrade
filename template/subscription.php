@@ -2,23 +2,18 @@
 <title>Abonnement - GoodGrade</title>
 
 
-<link href="styles/subscription.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 <div id="top"></div>
 
 <body>
-    <h1 class="title">Votre abonnement </h1>
-
-    <p class="desc">Retrouver vos ici votre abonnement en cours ou choisissez en un. </p>
-    <!-- Si abonné, affiché l'abonnement avec le temps restant (en jours) -->
-
-    <h2 class="ifsubscriber" style="visibility: hidden;"> Vous êtes abonné depuis le $VARIABLE_SubscribeDate avec la formule $VARIABLE_SubscribeFormule</h2>
+    <h1 class="subscription-title">Nos abonnements </h1>
 
     <ul>
+
         <li class="formule">
-            <div class="name">L'abonnement tout inclus</div>
-            <div class="description">Cette offre comprend : <br />
+            <div class="subscription-name">L'abonnement tout inclus</div>
+            <div class="subscription-description">Cette offre comprend : <br />
                 - Une <b>tablette 7" </b> pour une utilisation directe.<br />
                 - Un <b>support tablette </b> réglable pour la positionner où vous voulez.<br />
                 - Une <b>documentation complète</b> par mail et papier pour l'utilisation de la tablette et GoodGrade. <br />
@@ -28,8 +23,8 @@
             <div class="price">19,99€ le premier puis 12,99€ par mois</div>
         </li>
         <li class="formule">
-            <div class="name">L'abonnement sans engagement</div>
-            <div class="description">Cette offre comprend: <br />
+            <div class="subscription-name">L'abonnement sans engagement</div>
+            <div class="subscription-description">Cette offre comprend: <br />
                 - <b>Aucun accessoire</b> n'est livré avec cette offre, vous devrez donc avoir votre tablette ou téléphone. <br />
                 - Le <b>générateur de QrCode</b> directement depuis votre espace personnelle. <br />
                 - Vous recevrez à votre adresse mail <b>une documentation </b>pour utiliser GoodGrade. <br />
@@ -43,8 +38,8 @@
 
     <div class="howtosubscribed">
 
-        <p> Pour souscrire à un abonnement, merci de remplir le formulaire ci-joint, nous prendrons contact avec vous ! </p>
-        <form method="POST">
+        <p class="subscriber"> Pour souscrire à un abonnement, merci de remplir le formulaire ci-joint, nous prendrons contact avec vous ! </p>
+        <form method="POST" class="subscription-form">
             <input type="text" name="name" placeholder="Nom" onclick="javascript:this.placeholder = '';"> <br />
             <input type="email" name="email" placeholder="Email" onclick="javascript:this.placeholder = '';" required><br />
             <input type="tel" name="tel" placeholder="Numéros de téléphone" onclick="javascript:this.placeholder = '';" required><br />
@@ -53,7 +48,7 @@
                 <option value="tout-inclus">Tout inclus</option>
                 <option value="sans-engagement">Sans engagement</option>
             </select></br>
-            <input type="submit" name="send" class="submit" placeholder="Envoyer ">
+            <input type="submit" name="send" class="next" placeholder="Envoyer ">
 
         </form>
         <?php
@@ -71,7 +66,16 @@
         <?php
         }
         ?>
+
+
+
     </div>
+
+
+
+
+
+
 
 
 </body>

@@ -8,8 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<link href="styles/etregistersec.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 <body>
 
@@ -17,7 +16,7 @@
 
     <h1 class="thanks"> Merci pour votre confiance </h1>
     <h2 class="desc">Pour créer la page de votre établissement, veuillez compléter les champs suivant :</h2>
-    <form method="POST" action="" enctype="multipart/form-data">
+    <form method="POST" class="etregistersec-form" action="" enctype="multipart/form-data">
 
         <select name="eta" id="et-select" required>
             <option value="">--Choisissez votre secteur--</option>
@@ -32,10 +31,12 @@
 
         <fieldset>
             <legend>Vos photos d'établissement</legend>
-            <br />
-            <input name="image" type="file"><br />
-            <input name="image2" type="file"><br />
-            <input name="image3" type="file"><br />
+            <center>
+                <br />
+                <input name="image" type="file"><br />
+                <input name="image2" type="file"><br />
+                <input name="image3" type="file"><br />
+            </center>
         </fieldset>
 
 

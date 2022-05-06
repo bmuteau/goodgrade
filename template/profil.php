@@ -2,21 +2,20 @@
 <title>Mon profil - GoodGrade</title>
 
 
-<link href="styles/profil.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 <div id="top"></div>
 
 <body>
     <h1 class="title">Bienvenue sur votre profil! </h1>
-    <div class="container">
+    <div class="profil-container">
 
 
-        <div class="lname"><input type="text" name='fname' placeholder="<?= $_SESSION['firstname'] ?>"></div>
-        <div class="fname"><input type="text" name='lname' placeholder="<?= $_SESSION['lastname'] ?>"></div>
-        <div class="pseudos"><input type="text" name='pseudo' placeholder="<?= $_SESSION['pseudo'] ?>"></div>
-        <div class="password"><input type="text" name='email' placeholder="<?= $_SESSION['email'] ?>"></div>
-        <div class="postalcode"><input type="text" name='postalcode' placeholder="<?= $_SESSION['postalcode'] ?>"></div>
+        <input type="text" class="lname" name='fname' placeholder="<?= $_SESSION['firstname'] ?>">
+        <input type="text" class="fname" name='lname' placeholder="<?= $_SESSION['lastname'] ?>">
+        <input type="text" class="pseudos" name='pseudo' placeholder="<?= $_SESSION['pseudo'] ?>">
+        <input type="text" class="password" name='email' placeholder="<?= $_SESSION['email'] ?>">
+        <input type="text" class="postalcode" name='postalcode' placeholder="<?= $_SESSION['postalcode'] ?>">
         <div class="picture">
 
             <?php if (!empty($_SESSION['image'])) { ?>
@@ -34,19 +33,11 @@
 
     </div>
     <button type="submit" class="change" name="change"><a href="change">Changer mes informations</a> </button>
-    <p class="number"><span><?= $count['count'] ?></span> avis déposés</p>
+    <p class="number"><span class="span"><?= $count['count'] ?></span> avis déposés</p>
 
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
-    <p class="anonym">Passer le compte en mode anonyme</p>
-    <a class="changemdp" href="newmdp"><input style="position: relative;
-    left: 40%;
-    top: 5%;" type="submit" value="changer son mdp"></a>
-    <a class="deco" href="deconnexion"><input style="position: relative;
-    left: 40%;
-    top: 5%;" type="submit" value="se deconnecter"></a>
+
+    <a href="newmdp"><input class="changemdp" type="submit" value="Modifier son mot de passe"></a>
+    <a href="deconnexion"><input class="changemdp" type="submit" value="Se déconnecter"></a>
 
 
 
@@ -57,7 +48,7 @@
 
 
 
-    <div class="footer">
+    <div class="profil-footer">
 
         <div class="faq"><a href="faq">FAQ</a></div>
         <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>

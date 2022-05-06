@@ -8,14 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<link href="styles/login.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 <body>
 
     <a href="home"> <img src="src/Logo1.png" class="logo"></a>
 
-    <h1 class="title"> Se connecter </h1>
+    <h1 class="login-title"> Se connecter </h1>
     <form class="loginplace" method="POST">
 
         <label>Email</label><br />

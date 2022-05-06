@@ -2,8 +2,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="styles/contact.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 
 <div id="top"></div>
@@ -12,7 +11,7 @@
 
     <h1 class="contacte">Nous contacter </h1>
 
-    <form method="POST">
+    <form method="POST" class="form-contact">
         <input type="text" name="name" placeholder="Nom" onclick="javascript:this.placeholder = '';"> <br />
         <input type="text" name="firstname" placeholder="Prénom" onclick="javascript:this.placeholder = '';"><br />
         <input type="email" name="email" placeholder="Email" onclick="javascript:this.placeholder = '';" required><br />
@@ -41,7 +40,7 @@
 
 
 
-    <div class="footer">
+    <div class="footer-contact">
 
         <div class="faq"><a href="faq">FAQ</a></div>
         <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>

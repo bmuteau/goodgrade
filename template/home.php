@@ -2,8 +2,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="styles/home.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/styles.css" rel="stylesheet">
 
 
 
@@ -11,7 +10,7 @@
 <div id="top"></div>
 
 <body>
-    <div id="main">
+    <div>
         <br>
 
         <br>
@@ -19,7 +18,7 @@
         <br>
         <br>
 
-        <form method="GET">
+        <form method="GET" class="form-home">
             <input class="search" type="search" name="q" placeholder="Rechercher un établissement">
             <input type="submit" name="send" value="envoyer" hidden>
 
@@ -27,8 +26,6 @@
 
 
         <?php if ($hlp->myGet('q') == null) { ?>
-
-            <h1 class="title">NOS RECOMMANDATIONS </h1>
 
             <div class="bestResto">
 
@@ -41,7 +38,7 @@
                         <?=
                         $rests['company_name'] . $rests['nombre'] . round($rests['note'], 1, PHP_ROUND_HALF_EVEN) . $rests['postalcode'] ?>
                     </p>
-                    <img src="public/avatar/<?php echo $rests['image'] ?>">
+                    <img src="public/avatar/<?php echo $rests['image'] ?>" style="display:none;">
                 <?php endforeach ?>
 
             </div>
@@ -103,7 +100,7 @@
 
 
 
-    <div class="footer">
+    <div class="home-footer">
 
         <div class="faq"><a href="faq">FAQ</a></div>
         <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>

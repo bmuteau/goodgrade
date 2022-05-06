@@ -2,6 +2,8 @@
 global $db, $hlp;
 if ($hlp->isCompany() == true) {
 
+
+
     $sent = false;
 
 
@@ -18,6 +20,8 @@ if ($hlp->isCompany() == true) {
         );
         $sent = true;
     }
+
+
 
     include 'template/header.php';
     include 'template/subscription.php';

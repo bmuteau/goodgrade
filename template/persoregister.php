@@ -8,17 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<link href="styles/persoregister.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 <body>
 
     <a href="home"> <img src="src/Logo1.png" class="logo"></a>
 
-    <h1 class="title"> S'inscrire </h1>
+    <h1 class="etregister-title"> S'inscrire </h1>
     <h2 class="registeret"><a href="etregister"> ou enregistrer son établissement</a> </h2>
 
-    <form method="POST">
+    <form method="POST" class="persoregister-form">
         <p class="rules">Tous les champs sont obligatoires</p>
         <br />
         <input name="lastname" type="text" placeholder="NOM" onclick="javascript:this.placeholder = '';" required>

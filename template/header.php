@@ -1,19 +1,18 @@
-<link href="styles/header.css" rel="stylesheet">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" type="image/png" href="src/favicon/favicon-32x32.png" />
 
+<link href="styles/style.css" rel="stylesheet">
 
 <section class="header">
-    <div class="left"><a href="home"><img src="src/Logo1.png" class="logo"></a></div>
+    <div class="left"><a href="home"><img src="src/Logo1.png" class="header-logo"></a></div>
 
 
     <?php if (isset($_SESSION['email'])) {
         $login = $_SESSION['email'];
-    ?> <a href="profile">
+    ?> <a href="profil">
             <?php if ($hlp->isCompany() == true) { ?>
                 <a href="etprofile<?= '?id=' . $_SESSION['id'] ?>"> <?php } ?>
 

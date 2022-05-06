@@ -7,17 +7,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
-<link href="styles/etregister.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 <body>
 
     <a href="home"> <img src="src/Logo1.png" class="logo"></a>
 
-    <h1 class="title"> Enregister son établissement </h1>
+    <h1 class="etregister-title"> Enregister son établissement </h1>
     <h2 class="registeret"><a href="persoregister"> ou s'inscrire </a> </h2>
 
-    <form method="POST">
+    <form method="POST" class="etregister-form">
         <p class="rules">Tous les champs sont obligatoires</p>
         <br />
         <input name="gerantname" type="text" placeholder="NOM DU GERANT" onclick="javascript:this.placeholder = '';" required>

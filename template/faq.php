@@ -2,16 +2,14 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="styles/faq.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
-
+<link href="styles/style.css" rel="stylesheet">
 
 <div id="top"></div>
 
 <body>
 
     <div class="center">
-        <h1 class="title">Les questions les plus posées</h1>
+        <h1 class="faq-title">Les questions les plus posées</h1>
         <div class="answ">
 
             <p class="question">En combien de temps je peut recevoir mon abonnement avec la tablette? </p>
@@ -57,7 +55,7 @@
 
 
 
-    <div class="footer">
+    <div class="faq-footer">
 
         <div class="faq"><a href="faq">FAQ</a></div>
         <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>

@@ -2,31 +2,30 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="styles/howtouse.css" rel="stylesheet">
-<link href="styles/footer.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
 
 
 <div id="top"></div>
 
 <body>
-    <div id="main">
-        <div class="center">
+    <div>
+        <div class="htu-center">
             <h1 class="htu">Comment ça marche ?</h1>
 
 
-            <ul class="step">
+            <ul class="step" style="list-style-position:inside;">
 
                 <li>Scanner le QrCode proposer par l'établissement</li>
-                <li>Déposer un commentaire maintenant ou plus tard</li>
+                <li>Déposer votre commentaire.</li>
                 <li>Grâce à votre avis avec GoodGrade, vous contribuez <br /> à la lutte contre les faux-avis </li>
                 <li>Merci à vous ! </li>
 
             </ul>
 
             <h1 class="chef">Vous êtes gérant d'un établissement ? </h1>
-            <ul class="step">
+            <ul class=" step" style="list-style-position:inside;">
                 <li>Chosissez l'abonnement qui vous convient le plus</li>
-                <li>Faites scanner vos clients un QrCode<br /> (dès qu'un QrCode est scanné,celui ci change) </li>
+                <li>Faites scanner vos clients un QrCode </li>
                 <li>Recevez des avis sécurisés</li>
                 <li>Et gérer les simplement et rapidement depuis <br /> votre page établissement</li>
 
@@ -40,7 +39,7 @@
 
 
 
-        <div class="footer">
+        <div class="htu-footer">
 
             <div class="faq"><a href="faq">FAQ</a></div>
             <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
