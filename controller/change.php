@@ -50,6 +50,7 @@ if ($hlp->isConnected() == true) {
     }
 
     include 'template/change.php';
+    include 'template/header.php';
 } else {
     header('location:home');
 }

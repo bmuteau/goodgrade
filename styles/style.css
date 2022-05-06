@@ -18,6 +18,35 @@ body {
   margin: 20px auto;
 }
 
+/* change styles*/
+.change-title {
+  margin-top: 39%;
+  text-align: center;
+}
+.change-container {
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+}
+.changeInfo {
+  background-image: linear-gradient(
+    to right,
+    #678983,
+    #839f90,
+    #a2b49e,
+    #c4c8af,
+    #e6ddc4
+  );
+  margin-top: 25px;
+  padding: 5px 14px;
+  border: none;
+  border-radius: 10px;
+}
+@media (min-width: 768px) and (max-width: 2129px) {
+  .change-title {
+    margin-top: 10%;
+  }
+}
 /* subscription styles*/
 
 .subscription-title {

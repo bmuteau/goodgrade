@@ -11,20 +11,19 @@
 <body>
 
     <body>
-        <h1 class="title">editer votre profil! </h1>
-        <div class="container">
+        <h1 class="change-title">Modifier mes informations ! </h1>
+        <div class="change-container">
 
             <form method="POST" action="" enctype="multipart/form-data">
-                <div class="lname"><label>fname<input type="text" name='fname' value="<?= $_SESSION['firstname'] ?>"></label></div>
-                <div class="fname"><label>lname<input type="text" name='lname' value="<?= $_SESSION['lastname'] ?>"></label></div>
-                <div class="pseudos"><label>pseudos<input type="text" name='pseudo' value="<?= $_SESSION['pseudo'] ?>"></label></div>
-                <div class="mail"><label>mail<input type="text" name='email' value="<?= $_SESSION['email'] ?>"></label></div>
-                <div class="postalcode"><label>Code postal<input type="text" name='postalcode' value="<?= $_SESSION['postalcode'] ?>"></label></div>
-                <label>Avatar</label><br />
-                <input type="file" name="avatar">
+                <div class="lname"><label>Mon prénom:</label></br><input type="text" name='fname' value="<?= $_SESSION['firstname'] ?>"></div>
+                <div class="fname"><label>Mon nom:</label></br><input type="text" name='lname' value="<?= $_SESSION['lastname'] ?>"></div>
+                <div class="pseudos"><label>Mon pseudo :</label></br> <input type="text" name='pseudo' value="<?= $_SESSION['pseudo'] ?>"></div>
+                <div class="mail"><label>Mon adresse mail:</label></br> <input type="text" name='email' value="<?= $_SESSION['email'] ?>"></div>
+                <div class="postalcode"><label>Mon code postal:</label></br><input type="text" name='postalcode' value="<?= $_SESSION['postalcode'] ?>"></div></br>
+                <label>Mon image de profil</label><br />
+                <input type="file" name="avatar"></br>
 
-
-                <input type="submit" value="sauvegarder" name="save">
+                <input type="submit" value="Enregistrer mes informations" name="save" class="changeInfo">
 
 
             </form>
@@ -35,5 +34,19 @@
             ?>
         </div>
     </body>
+    <footer>
+
+
+
+        <div class="home-footer">
+
+            <div class="faq"><a href="faq">FAQ</a></div>
+            <a href="#top"> <img src="src/iconfinder_arrow_forward_navigation_next_right_3994400.svg" class="up"></a>
+            <div class="contact"><a href="contact">Nous contacter</a></div>
+            <div class="legal"><a href="mentionlegal">Mentions légales</a></div>
+            <div class="copyright">GoodGrade, site d'avis sécurisé</div>
+
+        </div>
+    </footer>
 
 </html>
