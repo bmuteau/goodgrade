@@ -18,6 +18,58 @@ body {
   margin: 20px auto;
 }
 
+/* newmdp styles*/
+
+.editPass {
+  margin-top: 40%;
+  font-size: 25px;
+  text-align: center;
+}
+.edit-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-image: linear-gradient(
+    to top,
+    #678983,
+    #678983,
+    #678983,
+    #678983,
+    #678983,
+    #719188,
+    #7b998e,
+    #86a193,
+    #9fb3a0,
+    #bac5af,
+    #d5d7bf,
+    #f0e9d2
+  );
+  position: absolute;
+  width: 100%;
+  height: 166px;
+  bottom: 0px;
+}
+@media (min-width: 426px) {
+  .editPass {
+    margin-top: 25%;
+  }
+  .edit-footer {
+    height: 40%;
+    bottom: -190px;
+  }
+}
+@media (min-width: 768px) and (max-width: 2129px) {
+  .editPass {
+    margin-top: 15%;
+  }
+  .edit-footer {
+    height: 60%;
+    bottom: -200px;
+  }
+}
+
 /* notfound styles*/
 
 .oups {

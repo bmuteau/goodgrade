@@ -7,3 +7,4 @@ if (isset($_POST['send'])) {
 }
 
 include 'template/newmdp.php';
+include 'template/header.php';
