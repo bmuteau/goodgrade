@@ -9,10 +9,10 @@ $avis = "";
 
 $id_company = $_SESSION['userTargetId'];
 
-if (empty($id_user)) {
-    $id_user = "";
+if (empty($pseudo)) {
+    $pseudo = "";
 } else {
-    $id_user = $_POST['name'];
+    $pseudo = $_POST['name'];
 }
 
 
@@ -50,17 +50,16 @@ if (isset($_POST['sendId'])) {
 }
 if (isset($_POST['validId'])) {
     unset($_SESSION['company_name']);
+
     header('location:etprofile?id=' . $id_company);
 
 
     $connect = $db->connect();
     if ($connect != null) {
-        $stm = $connect->prepare("INSERT INTO avis(id_company,id_user,note,avis) VALUES (?,?,?,?)");
+        $stm = $connect->prepare("INSERT INTO avis(id_company) VALUES (?)");
         $stm->execute(array(
             $id_company,
-            $id_user,
-            $note,
-            $avis,
+
         ));
     }
 }
@@ -78,3 +77,4 @@ if (isset($_POST['avis'])) {
 }
 
 include 'template/qrcodescanner.php';
+include 'template/header.php';

@@ -61,7 +61,7 @@ if ($connect != null) {
     $nombre = $avis->fetch();
 }
 if ($connect != null) {
-    $query = $connect->prepare("SELECT * FROM avis INNER JOIN users ON avis.id_user=users.id  WHERE id_company=? AND report=0");
+    $query = $connect->prepare("SELECT * FROM avis INNER JOIN users ON avis.pseudo=users.pseudo  WHERE id_company=? AND report=0 ORDER BY avis.id DESC");
     $query->execute(array($companyData['uid']));
     $posts = $query->fetchAll();
 }
